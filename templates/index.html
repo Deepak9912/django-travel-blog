@@ -1,7 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Hello world!!</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quasi at ullam nam neque ex harum, 
-    debitis sed voluptate assumenda eius est tempore atque voluptates, numquam eveniet iure delectus? Explicabo?</p>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!--blog entry form-->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+            {% for post in post_list %}
+            <!--card temaplate-->
+            <div class="card" style="width: 18rem;">
+                <div class="image-container">
+                {% if 'placeholder' in post.featured_image.url %}
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top">
+                {% else %}
+                <img src="{{ post.featured_image.url }}" class="card-img-top">
+                </div>
+                <div class="card-body">
+                  <a href="#" class="card-title">{{ post.title }}</a>
+                  <a href="#" class="card-text">{{ post.excerpt }}</a>
+                  <hr>
+                  <p class="card-text text-muted">{{ post.created_on}} <i class="far fa-heart"></i> {{ post.likes }} </p>
+                </div>
+            </div>
+            <!--card temaplate end-->
+            {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row">
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
