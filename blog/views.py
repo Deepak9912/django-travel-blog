@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.views import generic
+from django.shortcuts import render, get_object_or_404
+from django.views import generic, View
 from .models import Post
+from django.http import HttpResponse
 
 class PostList(generic.ListView):
     model = Post
@@ -8,6 +9,26 @@ class PostList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 6
 
-class PostDetail(generic.DetailView):
-    model = Post
-    template_name = 'post_blog.html'
+
+class DetailBlog(View):
+
+    def get(self, request, slug):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by('created_on')
+        liked = false
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        
+        return render(
+            request,
+            "detail_blog.html",
+            {
+                "post":post,
+                "comments": comments,
+                "liked": liked
+            },
+        )
+
+    
+ 
