@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
-from django.http import HttpResponse
+
 
 class PostList(generic.ListView):
     model = Post
