@@ -31,9 +31,17 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
+              {% if used.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{% url 'accounts_logout' %}">Logout</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts_signup' %}">Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts_login' %}">Login</a>
+              </li>
+              {% endif   %}
             </ul>
           </div>
         </div>
