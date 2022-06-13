@@ -1,7 +1,5 @@
-body {
-    background-color: aquamarine;
-}
 
+/* index.html page */
 .post-link {
     text-decoration: none;
     color: #030910;
@@ -22,6 +20,7 @@ body {
     color: rgb(249, 244, 244);
     margin: 5px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .card-body {
@@ -32,3 +31,29 @@ body {
 .likes {
     margin-bottom: 20px;
 }
+
+/* detail blog page */
+
+.blog{
+   height: 50vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.bloghead-text {
+    position: relative;
+    background-color: #0ecec7;
+    color: #fff;
+    width: auto;
+}
+
+.blogimage {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+

@@ -5,8 +5,8 @@
 <div class="container mx-auto mt-3">
     <div class="row">
         {% for post in post_list %}
-        <div class="col-md-4 mt-5">
-            <div class="card" style="width: 22rem;">
+        <div class="col-md-4 mt-3">
+            <div class="card">
                 <div class="image-container">
                     {% if "placeholder" in post.featured_image.url %}
                     <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="card-img-top">
