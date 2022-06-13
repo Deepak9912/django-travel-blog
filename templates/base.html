@@ -29,17 +29,17 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
-              {% if used.is_authenticated %}
+              {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'accounts_logout' %}">Logout</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'accounts_signup' %}">Signup</a>
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'accounts_login' %}">Login</a>
+                <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
               </li>
               {% endif   %}
             </ul>
