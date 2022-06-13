@@ -22,6 +22,13 @@
     font-weight: 700;
 }
 
+.sidebar{
+    box-shadow: 0 16px 48px #E3E7EB;
+    float: right;
+    margin: 2%;
+}
+
+
 .card-body {
     border: none;
     margin-top: 5px;
@@ -35,7 +42,7 @@
 
 .blog{
    height: 50vh;
-    width: 100%;
+    width: 50%;
     position: relative;
     overflow: hidden;
     display: inline-block;
@@ -44,9 +51,9 @@
 
 .bloghead-text {
     position: relative;
-    background-color: #0ecec7;
-    color: #fff;
+    color: rgb(14, 13, 13);
     width: auto;
+    width: 100%;
 }
 
 .blogimage {
@@ -55,4 +62,7 @@
     overflow: hidden;
 }
 
+.container {
+    margin-left: 5px;
+}
 
