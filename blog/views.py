@@ -27,9 +27,40 @@ class DetailBlog(View):
             {
                 "post": post,
                 "comments": comments,
+                "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
             },
         )
     
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        user_comment = CommentForm(data=request.POST)
+
+        if user_comment.is_valid():
+            user_comment.instance.email = request.user.email
+            user_comment.instance.name = request.user.username
+            comment = user_comment.save(commit=False)
+            comment.post = post
+            comment.save()
+        else:
+            user_comment = CommentForm() 
+
+        return render(
+            request,
+            "detail_blog.html",
+            {
+                "post": post,
+                "comments": comments,
+                "commented": True,
+                "liked": liked,
+                "comment_form": CommentForm()
+            },
+        )
  
