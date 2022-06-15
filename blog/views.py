@@ -63,3 +63,8 @@ class DetailBlog(View):
                 "liked": liked
             },
         )
+
+def ContactView(request):
+    form = CommentForm()
+    context = {'form':form}
+    return render(request, 'contact/contact.html', context)
