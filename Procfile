@@ -1,1 +1,1 @@
-web: travelbog
+web: gunicorn travelblog.wsgi
