@@ -69,7 +69,7 @@ class DetailBlog(View):
 
 # view for contact form
 class ContactFormView(FormView):
-    template_name = 'base.html'
+    template_name = 'contact/base.html'
     form_class = Contact
     success_url = '/thanks/'
 
