@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.urls import reverse
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -50,5 +51,5 @@ class Contact(models.Model):
     email = models.EmailField()
     message = models.TextField()
 
-    def __str__(Self):
-        return self.email
+    def __str__(self):
+        return self.name

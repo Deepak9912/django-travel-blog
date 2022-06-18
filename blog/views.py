@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Post
+from .models import Post, Contact
 from .forms import CommentForm
+from django.urls import reverse_lazy
+from django.views.generic import FormView
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 class PostList(generic.ListView):
@@ -11,6 +14,7 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
+# view for detailed blog post
 class DetailBlog(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -64,7 +68,15 @@ class DetailBlog(View):
             },
         )
 
-def ContactView(request):
-    form = CommentForm()
-    context = {'form':form}
-    return render(request, 'contact/contact.html', context)
+# view for contact form
+class ContactFormView(SuccessMessageMixin,FormView):
+
+    def post(self, request, slug, *args, **kwargs):
+        model = Contact
+        template_name = 'base.html'
+        contact_form = Contact(data=get.POST)
+        
+
+    def form_valid(Self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)

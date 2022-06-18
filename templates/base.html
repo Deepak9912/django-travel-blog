@@ -141,8 +141,10 @@
         <h2 class="section-heading text-uppercase">Contact Us</h2>
         <h3 class="section-subheading text-muted">Send us an email for any further queries.</h3>
     </div>
+
     <form action="Post">
-  
+        {% csrf_token %}
+        {{ form.as_p }}
       <label for="fname">Full Name</label>
       <input type="text" id="name" name="firstname" placeholder="Your full name..">
   
