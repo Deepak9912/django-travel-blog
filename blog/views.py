@@ -2,9 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Contact
 from .forms import CommentForm
-from django.urls import reverse_lazy
-from django.views.generic import FormView
-from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic.edit import FormView
+
 
 
 class PostList(generic.ListView):
@@ -69,14 +68,11 @@ class DetailBlog(View):
         )
 
 # view for contact form
-class ContactFormView(SuccessMessageMixin,FormView):
+class ContactFormView(FormView):
+    template_name = 'base.html'
+    form_class = Contact
+    success_url = '/thanks/'
 
-    def post(self, request, slug, *args, **kwargs):
-        model = Contact
-        template_name = 'base.html'
-        contact_form = Contact(data=get.POST)
-        
-
-    def form_valid(Self, form):
-        form.instance.created_by = self.request.user
+    def form_valid(self, form):
+        form.send_email()
         return super().form_valid(form)
