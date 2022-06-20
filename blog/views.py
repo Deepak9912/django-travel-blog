@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Contact
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 from django.views.generic.edit import FormView
+from django.http import HttpResponseRedirect
 
 
 
@@ -69,10 +70,14 @@ class DetailBlog(View):
 
 # view for contact form
 class ContactFormView(FormView):
-    template_name = 'contact/base.html'
-    form_class = Contact
+
+    def post(self, request, slug, *args, **kwargs):
+    template_name = 'base.html'
+    form = ContactForm(data=request.POST)
     success_url = '/thanks/'
 
     def form_valid(self, form):
         form.send_email()
         return super().form_valid(form)
+    
+    return render(request, "base.html", {'form': form})
