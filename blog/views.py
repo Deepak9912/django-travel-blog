@@ -71,7 +71,7 @@ class DetailBlog(View):
 # view for contact form
 class ContactFormView(FormView):
 
-    def post(self, request, slug, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         template_name = 'contact/base.html'
         form = ContactForm(data=request.POST)
         success_url = '/thanks/'
