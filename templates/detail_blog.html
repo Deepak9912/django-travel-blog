@@ -118,11 +118,8 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
-                    <a href="/edit/{% url 'post-edit' comment.id %}">
+                    <a href="{% url 'post-edit' comment.id %}">
                         <button>Edit</button>
-                    </a>
-                    <a href="/delete/{{ comment.id }}" >
-                        <button>Delete</button>
                     </a>
                 </div>
                 {% endfor %}
