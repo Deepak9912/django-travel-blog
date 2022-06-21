@@ -107,7 +107,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+            <h3>Edit Comments</h3>
             <div class="card-body">
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
@@ -118,33 +118,20 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
-                    <a href="/edit/{% url 'post-edit' comment.id %}">
-                        <button>Edit</button>
-                    </a>
-                    <a href="/delete/{{ comment.id }}" >
-                        <button>Delete</button>
-                    </a>
                 </div>
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
                 {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <h3>Edit comment:</h3>
                 <form method="post" style="margin-top: 15px;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg bg-dark text-light mt-3">Submit</button>
                 </form>
-                {% endif %}
                 {% endif %}
             </div>
         </div>
