@@ -1,4 +1,4 @@
-from .models import Comment
+from .models import Comment, Contact
 from django import forms
 
 
@@ -8,6 +8,6 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 class ContactForm(forms.ModelForm):
-    name = models.CharField(label='name' max_length=100)
-    email = models.EmailField(label='email')
-    message = models.TextField(label='message')
+    class Meta:
+        model = Contact
+        fields = ('name', 'email', 'message',)

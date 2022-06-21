@@ -72,12 +72,12 @@ class DetailBlog(View):
 class ContactFormView(FormView):
 
     def post(self, request, slug, *args, **kwargs):
-    template_name = 'contact/base.html'
-    form = ContactForm(data=request.POST)
-    success_url = '/thanks/'
+        template_name = 'contact/base.html'
+        form = ContactForm(data=request.POST)
+        success_url = '/thanks/'
 
     def form_valid(self, form):
         form.send_email()
         return super().form_valid(form)
     
-    return render(request, "base.html", {'form': form})
+        return render(request, "base.html", {'form': form})
