@@ -7,7 +7,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'slug', 'status', 'created_on')
-    search_field = ('title', 'content')
+    search_field = ('title', 'content', 'body')
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
     summernote_fields = ('content',)
@@ -26,4 +26,4 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    search_field = ('name', 'email', 'body')
+    search_field = ('name', 'email', 'message')
