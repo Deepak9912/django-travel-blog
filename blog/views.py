@@ -1,69 +1,78 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.views import generic, View
-from .models import Post, Contact
-from .forms import CommentForm, ContactForm
-from django.views.generic.edit import FormView, UpdateView, DeleteView
-from django.http import HttpResponseRedirect
+from django.views.generic.edit import UpdateView, DeleteView, FormView
+from .models import Post, Comment, Contact
+from .forms import PostForm, CommentForm, ContactForm
 
 
+# view for list of posts
+class PostList(LoginRequiredMixin, View):
+    def get(self, request, *args, **kwargs):
+        posts = Post.objects.all().order_by('-created_on')
+        form = PostForm()
 
-class PostList(generic.ListView):
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
-    paginate_by = 6
+        context = {
+            'post_list': posts,
+            'form': form,
+        }
+
+        return render(request, 'index.html', context)
+
+    def post(self, request, *args, **kwargs):
+        posts = Post.objects.all().order_by('-created_on')
+        form = PostForm(request.POST)
+
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.author = request.user
+            new_post.save()
+
+            context = {
+                'post_list': posts,
+                'form': form,
+            }
+
+            return render(request, 'index.html', context)
 
 
 # view for detailed blog post
-class DetailBlog(View):
+class DetailBlog(LoginRequiredMixin, View):
 
-    def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
-        liked = False
+    def get(self, request, pk, *args, **kwargs):
+        post = Post.object.get(pk=pk)
+        form = CommentForm()
+        comments = Comment.objects.filter(post=post).order_by('-created_on')
 
-        return render(
-            request,
-            "detail_blog.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": False,
-                "liked": liked,
-                "comment_form": CommentForm()
-            },
-        )
-    
-    def post(self, request, slug, *args, **kwargs):
+        context = {
+            'post': post,
+            'form': form,
+            'comments': comments,
+        }
 
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
-        liked = False
+        return render(request, 'detail_blog.html', context)
 
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
-            comment = comment_form.save(commit=False)
-            comment.post = post
-            comment.save()
-        else:
-            comment_form = CommentForm()
 
-        return render(
-            request,
-            "detail_blog.html",
-            {
-                "post": post,
-                "comments": comments,
-                "commented": True,
-                "comment_form": comment_form,
-                "liked": liked
-            },
-        )
+    def post(self, request, pk, *args, **kwargs):
+        post = Post.objects.get(pk=pk)
+        form = CommentForm(request.POST)
+
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.author = request.user
+            new_comment.post = post
+            new_comment.save()
+
+        comments = Comment.objects.filter(post=post).order_by('-created_on')
+
+        context = {
+            'post': post,
+            'form': form,
+            'comments': comments,
+        }
+
+        return render(request, 'detail_blog.html', context)
 
 
 #Edit a comment
