@@ -43,9 +43,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                 </li>
-                <h5 class="text-light text-capitalize"> <a href="{% url 'home' %}">
-                    <img src="../static/assets/img/avatar.jpg" class="rounded-circle"
-                      height="22" alt="Avatar" loading="lazy" /></a> {{user.username}}</h5>
+                <h5 class="text-light text-capitalize"> <a href="{% url 'home' %}"><i class="fas fa-user"></i></a> {{user.username}}</h5>
                 {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
