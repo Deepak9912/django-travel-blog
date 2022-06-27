@@ -8,33 +8,11 @@ from .forms import PostForm, CommentForm, ContactForm
 
 
 # view for list of posts
-class PostList(LoginRequiredMixin, View):
-    def get(self, request, *args, **kwargs):
-        posts = Post.objects.all().order_by('-created_on')
-        form = PostForm()
-
-        context = {
-            'post_list': posts,
-            'form': form,
-        }
-
-        return render(request, 'index.html', context)
-
-    def post(self, request, *args, **kwargs):
-        posts = Post.objects.all().order_by('-created_on')
-        form = PostForm(request.POST)
-
-        if form.is_valid():
-            new_post = form.save(commit=False)
-            new_post.author = request.user
-            new_post.save()
-
-            context = {
-                'post_list': posts,
-                'form': form,
-            }
-
-            return render(request, 'index.html', context)
+class PostList(generic.ListView):
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'index.html'
+    
 
 
 # view for detailed blog post
