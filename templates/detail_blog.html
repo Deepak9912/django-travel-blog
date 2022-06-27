@@ -87,10 +87,10 @@
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <p class="card-text ">
-                    {{ post.body }}
+                    {{ post.content | safe }}
                 </p>
                 <div class="row">
-                    <div class="col-1">
+                    <div class="col">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             {{ total_comments }}</strong>
@@ -110,12 +110,17 @@
             <h3>Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
-                <p>
-                    <strong>{{ comment.author }}</strong>{{ comment.created_on }}
-                    {% if request.user == comment.author %}]
-                    <a href="{% url 'post-edit' post.pk %}" style="color:"><i class="far fa-edit"></i></a>
-                    <a href="{% url 'comment-delete' post.pk comment.pk %}"><i class="fas fa-trash"></i></a>
-                </p>
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    <!-- The body of the comment goes before the | -->
+                    {{ comment.body | linebreaks }}
+                </div>
+                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
