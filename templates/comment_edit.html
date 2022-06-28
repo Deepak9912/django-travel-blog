@@ -63,37 +63,22 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.body | linebreaks }}
-                    <a href="{% url 'post-edit' comment.id %}">
-                        <button>Edit</button>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
+    <div class="row mt-5">
+        <div class="col-md-5 col-sm-6">
+            <a href="{% url 'home' %}" class="btn btn-dark"><i class="fa fa-arrow-left"> Back to feed</i></a>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
-                <h3>Update comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 15px;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg bg-dark text-light mt-3">Submit</button>
-                </form>
-            </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success mt-3">Submit!</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-  </body>
+
+</body>

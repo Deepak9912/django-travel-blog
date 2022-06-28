@@ -124,6 +124,9 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
+                    <a href="{% url 'comment_edit' comment.id %}">
+                        <button>Edit</button>
+                    </a>
                 </div>
                 {% endfor %}
             </div>

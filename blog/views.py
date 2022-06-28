@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic, View
-from .models import Post, Contact
+from .models import Post, Contact, Comment
 from .forms import CommentForm, ContactForm
 from django.views.generic.edit import FormView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
@@ -62,14 +62,14 @@ class DetailBlog(View):
         )
 
 #Edit a comment
-class PostEditView(UpdateView):
-    model = Post
-    fields = ['title', 'content', 'body']
-    template_name = 'post_edit.html'
+class CommentEditView(UpdateView):
+    model = Comment
+    fields = ['body']
+    template_name = 'comment_edit.html'
 
     def get_success_url(self):
-        pk = self.kwargs['pk']
-        return reverse_lazy('detail_blog', kwargs={'pk': pk})
+        slug = self.kwargs['slug']
+        return reverse_lazy('detail_blog', args=[slug])
 
 
 
