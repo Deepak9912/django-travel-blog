@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse, redirect, resolve_url
 from django.urls import reverse_lazy
 from django.views import generic, View
 from .models import Post, Contact, Comment
 from .forms import CommentForm, ContactForm
-from django.views.generic.edit import FormView, UpdateView, DeleteView
+from django.views.generic.edit import UpdateView, DeleteView
 from django.http import HttpResponseRedirect
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 class PostList(generic.ListView):
@@ -61,28 +62,20 @@ class DetailBlog(View):
             },
         )
 
+
+# Delete a comment
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    messages.success(request, 'The comment was deleted successfully')
+    return HttpResponseRedirect(reverse(
+        'detail_blog', args=[comment.post.slug]))
+
+
+
 #Edit a comment
-class CommentEditView(UpdateView):
+class EditComment(SuccessMessageMixin, UpdateView):
     model = Comment
-    fields = ['body']
-    template_name = 'comment_edit.html'
-
-    def get_success_url(self):
-        slug = self.kwargs['slug']
-        return reverse_lazy('detail_blog', args=[slug])
-
-
-
-# view for contact form
-class ContactFormView(FormView):
-
-    def post(self, request, *args, **kwargs):
-        template_name = 'contact/base.html'
-        form = ContactForm(data=request.POST)
-        success_url = '/thanks/'
-
-    def form_valid(self, form):
-        form.send_email()
-        return super().form_valid(form)
-    
-        return render(request, "base.html", {'form': form})
+    template_name = 'edit_comment.html'
+    form_class = CommentForm
+    success_message = 'Your comment is successfully updated'

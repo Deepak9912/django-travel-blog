@@ -63,19 +63,14 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <div class="row mt-5">
-        <div class="col-md-5 col-sm-6">
-            <a href="{% url 'home' %}" class="btn btn-dark"><i class="fa fa-arrow-left"> Back to feed</i></a>
-        </div>
-    </div>
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-5 col-sm-12">
-            <form method="POST">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="title">Update Comment</h1>
+            <p>Updating as: {{ user.username }}</p>
+            <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form | crispy }}
-                <div class="d-grid gap-2">
-                    <button class="btn btn-success mt-3">Submit!</button>
-                </div>
+                {{ form.as_p }}
+                <button class="btn btn-secondary right mb-4" type="submit" value="Save">Update</button>
             </form>
         </div>
     </div>
