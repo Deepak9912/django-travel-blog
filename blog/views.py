@@ -5,7 +5,8 @@ from django.views import generic, View
 from .models import Post, Contact, Comment
 from .forms import CommentForm, ContactForm
 from django.views.generic.edit import UpdateView
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.core.mail import send_mail, BadHeaderError
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -17,6 +18,32 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
+
+
+
+# view for contact page
+@login_required
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = "Website inquiry"
+            body = {
+                'name': form.cleaned_data['name'],
+                'email': form.cleaned_data['email_address'],
+                'message': form.cleaned_data['message']
+            }
+            message = "\n".join(body.values())
+
+            try:
+                send_mail(subject, message, 'travelblog@gmail.com', ['travelblog@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found')
+            return redirect ("main:home")
+        
+    form = ContactForm()
+    return render(request, "home/contact", {'form':form})
+
 
 # view for detailed blog post
 class DetailBlog(View):
