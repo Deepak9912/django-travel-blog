@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect, resolve_url
+from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views import generic, View
 from .models import Post, Contact, Comment
@@ -6,6 +7,8 @@ from .forms import CommentForm, ContactForm
 from django.views.generic.edit import UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 
 
 class PostList(generic.ListView):
@@ -64,12 +67,12 @@ class DetailBlog(View):
 
 
 # Delete a comment
+@login_required
 def delete_comment(request, comment_id):
-    comment = get_object_or_404(Comment, id=comment_id)
+    comment =  get_object_or_404(Comment, id=comment_id)
     comment.delete()
-    messages.success(request, 'The comment was deleted successfully')
-    return HttpResponseRedirect(reverse(
-        'detail_blog', args=[comment.post.slug]))
+    messages.success(request, 'The comment has been deleted successfully')
+    return HttpResponseRedirect(reverse('detail_blog', args=[comment.post.slug]))
 
 
 
