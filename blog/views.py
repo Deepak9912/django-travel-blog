@@ -4,11 +4,12 @@ from django.urls import reverse_lazy
 from django.views import generic, View
 from .models import Post, Contact, Comment
 from .forms import CommentForm, ContactForm
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.contrib import messages
 
 
 class PostList(generic.ListView):
@@ -71,13 +72,13 @@ class DetailBlog(View):
 def delete_comment(request, comment_id):
     comment =  get_object_or_404(Comment, id=comment_id)
     comment.delete()
-    messages.success(request, 'The comment has been deleted successfully')
+    messages.success(request, 'The comment was deleted successfully')
     return HttpResponseRedirect(reverse('detail_blog', args=[comment.post.slug]))
 
 
 
 #Edit a comment
-class EditComment(SuccessMessageMixin, UpdateView):
+class EditComment(UpdateView):
     model = Comment
     template_name = 'edit_comment.html'
     form_class = CommentForm
