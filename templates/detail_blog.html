@@ -63,29 +63,28 @@
     </nav>
 
     {% load crispy_forms_tags %}
-
-    <div class="blog">
+    <div class="bloghead">
         <div class="container">
-            <div class="row mt-2">
-                <div class="col-md-5 col-sm-6">
-                    <a href="{% url 'home' %}" class="btn btn-secondary"><i class="fa fa-arrow-left"> Back to feed</i></a>
+            <div class="row">
+                <div class="col-sm-6 py-4">
+                    <a href="{% url 'home' %}" class="btn btn-secondary"><i class="fa fa-arrow-left"> Back to
+                            feed</i></a>
                 </div>
-
             </div>
-            <div class="row g-0 mb-2 mt-3">
-                <div class="col-md-6 bloghead-text">
-                    <!-- Post title goes in these h1 tags -->
-                    <h1 class="post-title">{{ post.title }}</h1>
-                    <!-- Post author goes before the | the post's created date goes after -->
-                    <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-                </div>
-                <div class="d-none d-md-block col-md-6 blogimage">
+            <div class="row g-0">
+                <div class="d-none d-md-block col-md-10 blog-image">
+                    <!-- placeholder image will show if there is no image in post -->
                     {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%"
-                        alt="code-institue-image">
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                     {% else %}
-                    <img src=" {{ post.featured_image.url }}" width="100%" alt="city-image">
+                    <img src=" {{ post.featured_image.url }}" width="100%">
                     {% endif %}
+                </div>
+                <div class="blog-text">
+                    <!-- Post title -->
+                    <h1 class="post-title">{{ post.title }}</h1>
+                    <!-- Post author and post created date -->
+                    <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                 </div>
             </div>
         </div>
@@ -130,7 +129,8 @@
                         {% if user.is_authenticated and user.username == comment.name or user.is_superuser %}
                         <!-- to edit the comment posted by the user-->
                         <button type="button" class="btn btn-outline-dark mb-3">
-                            <a href="{% url 'edit_comment' comment.id %}" aria-label="Edit Comment" class="text-decoration-none text-muted">Edit</a>
+                            <a href="{% url 'edit_comment' comment.id %}" aria-label="Edit Comment"
+                                class="text-decoration-none text-muted">Edit</a>
                         </button>
                         <!--to delete the comment posted bu user-->
                         <button type="button" class="btn btn-outline-danger mb-3" data-bs-toggle="modal"
