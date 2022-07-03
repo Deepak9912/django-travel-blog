@@ -150,8 +150,9 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <a href="{% url 'delete_comment' comment.id %}"
-                                            aria-label="Delete Comment">Delete</a>
+                                        <button type="button" class="btn btn-danger"><a
+                                                href="{% url 'delete_comment' comment.id %}" aria-label="Delete Comment"
+                                                class="text-decoration-none text-light">Delete</a></button>
                                     </div>
                                 </div>
                             </div>
