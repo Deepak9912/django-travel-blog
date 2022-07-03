@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row mt-2">
                 <div class="col-md-5 col-sm-6">
-                    <a href="{% url 'home' %}" class="btn btn-dark"><i class="fa fa-arrow-left"> Back to feed</i></a>
+                    <a href="{% url 'home' %}" class="btn btn-secondary"><i class="fa fa-arrow-left"> Back to feed</i></a>
                 </div>
 
             </div>
@@ -128,9 +128,12 @@
                         </p>
                         {{ comment.body | linebreaks }}
                         {% if user.is_authenticated and user.username == comment.name or user.is_superuser %}
-                        <button class="bg-secondary"><a href="{% url 'edit_comment' comment.id %}">Edit</a></button>
+                        <!-- to edit the comment posted by the user-->
+                        <button type="button" class="btn btn-outline-dark mb-3">
+                            <a href="{% url 'edit_comment' comment.id %}" aria-label="Edit Comment" class="text-decoration-none text-muted">Edit</a>
+                        </button>
                         <!--to delete the comment posted bu user-->
-                        <button type="button" class="btn-delete bg-danger mb-3" data-bs-toggle="modal"
+                        <button type="button" class="btn btn-outline-danger mb-3" data-bs-toggle="modal"
                             data-bs-target="#delete-comment">
                             Delete
                         </button>
@@ -147,7 +150,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger"
+                                        <a href="{% url 'delete_comment' comment.id %}"
                                             aria-label="Delete Comment">Delete</a>
                                     </div>
                                 </div>
