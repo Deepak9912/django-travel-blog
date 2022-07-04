@@ -4,178 +4,212 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'csss/styles.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap_css/bootstrap_theme.css' %}">
 </head>
 
 <body>
-  <!--header-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-danger" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">Explorer</a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav d-flex align-items-end justify-content-end text-uppercase ms-auto text-light">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+    <!--header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark text-danger" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Explorer</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav d-flex align-items-end justify-content-end text-uppercase ms-auto text-light">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    <h5 class="text-light text-capitalize"> <a href="{% url 'home' %}"><i class="fas fa-user"></i></a>
+                        {{user.username}}</h5>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Welcome To Explorer!</div>
+            <div class="masthead-heading">“There’s a sunrise and a sunset every single day, and they’re absolutely free.
+                Don’t miss so many of them” – Jo Walton</div>
+        </div>
+    </header>
+    <!-- Masthead end-->
+    <!--Intro section end-->
+    <!--header end-->
+    {% block content %}
+
+    {% endblock %}
+
+    <!--Intro section-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">My favourite destinations</h2>
+                <h3 class="section-subheading text-muted">“The journey is my home” – Muriel Rukeyser</h3>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            src="{% static 'assets/img/about/1.jpg' %}" alt="city-image" /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2015</h4>
+                            <h4 class="subheading">Bruge, Belgium</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">
+                            <p>Bruges, the capital of West Flanders in northwest Belgium,
+                                is distinguished by its canals, cobbled streets and medieval buildings. Its port,
+                                Zeebrugge, is an important center for fishing and
+                                European trade.In the city center’s Burg square, the 14th-century Stadhuis (City Hall)
+                                has an ornate carved ceiling. Nearby,
+                                Markt square features a 13th-century belfry with a 47-bell carillon and 83m tower with
+                                panoramic views.</p>
+                        </div>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            src="{% static 'assets/img/about/2.jpg' %}" alt="city-image" /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2018</h4>
+                            <h4 class="subheading">Algarve, Portugal</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">The Algarve, Portugal’s southernmost region, is known for its Atlantic
+                                beaches and golf resorts.
+                                Whitewashed fishing villages on low cliffs overlooking sandy coves were transformed in
+                                the 1960s, and now its central coast between Lagos and Faro is lined with villas,
+                                hotels, bars and restaurants. The region's western Atlantic coast and rugged interior
+                                are less developed.</p>
+                        </div>
+                    </div>
                 </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            src="{% static 'assets/img/about/3.jpg' %}" alt="city-image" /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>December 2019</h4>
+                            <h4 class="subheading">Lake Como, Italy</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Lake Como, in Northern Italy’s Lombardy region, is an upscale resort
+                                area known for its dramatic scenery,
+                                set against the foothills of the Alps. The lake is shaped like an upside-down Y, with
+                                three slender branches that meet at the resort town of Bellagio.
+                                At the bottom of the southwest branch lies the city of Como, home to Renaissance
+                                architecture and a funicular that travels up to the mountain town of Brunate.</p>
+                        </div>
+                    </div>
                 </li>
-                <h5 class="text-light text-capitalize"> <a href="{% url 'home' %}"><i class="fas fa-user"></i></a> {{user.username}}</h5>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            src="{% static 'assets/img/about/4.jpg' %}" alt="city-image" /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>July 2020</h4>
+                            <h4 class="subheading">Lanzarote, Canary Islands</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">The Canary Islands, a Spanish archipelago off the coast of
+                                northwestern Africa, are rugged volcanic isles known for their black- and white-sand
+                                beaches.
+                                Tenerife, the largest island, is dominated by the sometimes-snowy active volcano Mt.
+                                Teide, which has its own astronomical observatory and
+                                is part of Teide National Park. Tenerife hosts a huge pre-Lent Carnival in the capital,
+                                Santa Cruz de Tenerife.</p>
+                        </div>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                </li>
-                {% endif %}
             </ul>
         </div>
-    </div>
-</nav>
-  <!-- Masthead-->
-  <header class="masthead">
-    <div class="container">
-        <div class="masthead-subheading">Welcome To Explorer!</div>
-        <div class="masthead-heading">“There’s a sunrise and a sunset every single day, and they’re absolutely free. Don’t miss so many of them” – Jo Walton</div>
-    </div>
-</header>
-<!-- Masthead end-->
-<!--Intro section end-->
-  <!--header end-->
-  {% block content %}
+    </section>
+    <!--Contact us-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Contact Us</h2>
+                <h3 class="section-subheading text-muted">Send us an email for any further queries.</h3>
+            </div>
 
-  {% endblock %}
+            <form method="post" action="contact/">
 
-  <!--Intro section-->
-  <section class="page-section" id="about">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">My favourite destinations</h2>
-            <h3 class="section-subheading text-muted">“The journey is my home” – Muriel Rukeyser</h3>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name..">
+
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Your last name..">
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <button type="submit" class="btn btn-success text-center btn-lg">Submit</button>
+
+            </form>
         </div>
-        <ul class="timeline">
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ static }}assets/img/about/1.jpg" alt="city-image"/></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2015</h4>
-                        <h4 class="subheading">Bruge, Belgium</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted"><p>Bruges, the capital of West Flanders in northwest Belgium, 
-                        is distinguished by its canals, cobbled streets and medieval buildings. Its port, Zeebrugge, is an important center for fishing and 
-                        European trade.In the city center’s Burg square, the 14th-century Stadhuis (City Hall) has an ornate carved ceiling. Nearby, 
-                        Markt square features a 13th-century belfry with a 47-bell carillon and 83m tower with panoramic views.</p></div>
+    </section>
+    <!--footer-->
+    <footer class="footer py-2 bg-dark text-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2022</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="https://twitter.com" aria-label="Twitter"
+                        target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://facebook.com" aria-label="Facebook"
+                        target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://linkedin.com" aria-label="LinkedIn"
+                        target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://instagram.com" aria-label="Instagram"
+                        target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
                 </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ static }}assets/img/about/2.jpg" alt="city-image" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2018</h4>
-                        <h4 class="subheading">Algarve, Portugal</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">The Algarve, Portugal’s southernmost region, is known for its Atlantic beaches and golf resorts. 
-                        Whitewashed fishing villages on low cliffs overlooking sandy coves were transformed in the 1960s, and now its central coast between Lagos and Faro is lined with villas, 
-                        hotels, bars and restaurants. The region's western Atlantic coast and rugged interior are less developed.</p></div>
-                </div>
-            </li>
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ static }}assets/img/about/3.jpg" alt="city-image" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>December 2019</h4>
-                        <h4 class="subheading">Lake Como, Italy</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">Lake Como, in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, 
-                        set against the foothills of the Alps. The lake is shaped like an upside-down Y, with three slender branches that meet at the resort town of Bellagio. 
-                        At the bottom of the southwest branch lies the city of Como, home to Renaissance architecture and a funicular that travels up to the mountain town of Brunate.</p></div>
-                </div>
-            </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{ static }}assets/img/about/4.jpg" alt="city-image" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>July 2020</h4>
-                        <h4 class="subheading">Lanzarote, Canary Islands</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">The Canary Islands, a Spanish archipelago off the coast of northwestern Africa, are rugged volcanic isles known for their black- and white-sand beaches. 
-                        Tenerife, the largest island, is dominated by the sometimes-snowy active volcano Mt. Teide, which has its own astronomical observatory and 
-                        is part of Teide National Park. Tenerife hosts a huge pre-Lent Carnival in the capital, Santa Cruz de Tenerife.</p></div>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-<!--Contact us-->
-<section class="page-section" id="contact">
-<div class="container">
-    <div class="text-center">
-        <h2 class="section-heading text-uppercase">Contact Us</h2>
-        <h3 class="section-subheading text-muted">Send us an email for any further queries.</h3>
-    </div>
-
-    <form method="post" action="contact/" >
-        
-        {% csrf_token %}
-        {{ form.as_p }}
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Your full name..">
-  
-      <label for="email">Email Address</label>
-      <input type="text" id="email" name="email" placeholder="Your last name..">
-  
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
-      <button type="submit" class="btn btn-success text-center btn-lg">Submit</button>
-  
-    </form>
-  </div>
-</section>
-<!--footer-->
-<footer class="footer py-2 bg-dark text-light">
-  <div class="container">
-      <div class="row align-items-center">
-          <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2022</div>
-          <div class="col-lg-4 my-3 my-lg-0">
-              <a class="btn btn-dark btn-social mx-2" href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener" ><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-dark btn-social mx-2" href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener" ><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-dark btn-social mx-2" href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener" ><i class="fab fa-linkedin-in"></i></a>
-              <a class="btn btn-dark btn-social mx-2" href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-          </div>
-      </div>
-  </div>
-</footer>
-<!--footer end-->
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
 </html>
