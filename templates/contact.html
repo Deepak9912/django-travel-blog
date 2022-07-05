@@ -7,30 +7,34 @@
 
 {% block content %}
 
-<section class="page-section" id="contactus">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Send us an email for any further queries.</h3>
-        </div>
+<form id="contactForm">
 
-        <form action="{% url 'contact' %}" onsubmit="return sendEmail(this);">
-
-            {% csrf_token %}
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name..">
-
-            <label for="email">Email Address</label>
-            <input type="text" id="email" name="email" placeholder="Your last name..">
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-            <button type="submit" class="btn btn-success text-center btn-lg">Submit</button>
-
-        </form>
+    <!-- Name input -->
+    <div class="mb-3">
+      <label class="form-label" for="name">Name</label>
+      <input class="form-control" id="name" type="text" placeholder="Name" />
     </div>
-</section>
+
+    <!-- Email address input -->
+    <div class="mb-3">
+      <label class="form-label" for="emailAddress">Email Address</label>
+      <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
+    </div>
+
+    <!-- Message input -->
+    <div class="mb-3">
+      <label class="form-label" for="message">Message</label>
+      <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+    </div>
+
+    <!-- Form submit button -->
+    <div class="d-grid">
+      <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+    </div>
+
+  </form>
+
+</div>
 
 {% endblock content %}
 
