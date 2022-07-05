@@ -1,0 +1,27 @@
+{% load static %}
+
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Contact Us</h2>
+            <h3 class="section-subheading text-muted">Send us an email for any further queries.</h3>
+        </div>
+
+        <form method="post" action="contact/">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name..">
+
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" placeholder="Your last name..">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <button type="submit" class="btn btn-success text-center btn-lg">Submit</button>
+
+        </form>
+    </div>
+</section>
