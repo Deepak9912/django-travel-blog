@@ -13,36 +13,17 @@ from django.db.models import Q
 from django.contrib import messages
 
 
+def contact(request):
+    """to render the contact page"""
+    return render(request, 'contact.html')
+
+
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
-
-
-
-# view for contact page
-@login_required
-def contact(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = "Website inquiry"
-            body = {
-                'name': form.cleaned_data['name'],
-                'email': form.cleaned_data['email_address'],
-                'message': form.cleaned_data['message']
-            }
-            message = "\n".join(body.values())
-
-            try:
-                send_mail(subject, message, 'travelblog@gmail.com', ['travelblog@gmail.com'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found')
-            return redirect ("main:home")
-        
-    form = ContactForm()
-    return render(request, "home/contact", {'form':form})
 
 
 # view for detailed blog post
