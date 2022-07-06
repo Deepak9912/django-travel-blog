@@ -16,35 +16,37 @@
     </p>
     <div class="row">
       <div class="col-md-8 mb-md-0 mb-5">
-        <form action="" id="contact">
+        <form action="{% url 'contact' %}" id="contact" onsubmit="return sendEmail(this);">
+          {% csrf_token %}
           <div id="contact">
             <div class="row">
               <div class="col-md-6">
                 <div class="md-from mb-2">
-                  <input type="text" name="fname" class="form-control">
-                  <label for="fname">Full Name</label>
+                  <input for="fname" type="text" name="fname" class="form-control" required>
+                  <label id="fname">Full Name</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="md-from mb-2">
-                  <input type="email" name="email" class="form-control">
-                  <label for="email">Your Email</label>
+                  <input for="email" type="email" name="email" class="form-control" required>
+                  <label id="email">Your Email</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form mb-2">
-                  <input type="text" name="subject" class="form-control">
-                  <label for="subject">Subject</label>
+                  <input for="subject" type="text" name="subject" class="form-control" required>
+                  <label id="subject">Subject</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form mb-2">
-                  <textarea name="message" type="text" rows="3" class="form-control md-textarea"></textarea>
-                  <label for="message">Your Message</label>
+                  <textarea for="message" name="message" type="text" rows="3" class="form-control md-textarea" required>
+                  </textarea>
+                  <label id="message">Your Message</label>
                 </div>
               </div>
             </div>
