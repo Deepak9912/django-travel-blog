@@ -13,10 +13,10 @@ class ContactForm(ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'name' = 'Please Enter your name',
-            'name' = 'Please Enter your email address',
-            'email' = 'Please Enter subject of your email',
-            'message' = 'Write your query..',
+            'name': 'Please enter your full name',
+            'email': 'Please enter your email address',
+            'subject': 'Please enter the subject of your message',
+            'message': 'Write your query here..',
         }
 
         self.fields['email'].widget.attrs['autofocus'] = True
