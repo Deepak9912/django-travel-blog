@@ -16,7 +16,7 @@
     </p>
     <div class="row">
       <div class="col-md-8 mb-md-0 mb-5">
-        <form action="{% url 'contact' %}" id="contact" onsubmit="return sendEmail(this);">
+        <form action="{% url 'contact' %}">
           {% csrf_token %}
           <div id="contact">
             <div class="row">
