@@ -10,8 +10,8 @@ def ContactPage(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'contact/contact.html')
+            return render(request, 'success.html')
 
     form = ContactForm()
     context = {'form': form}
-    return render(request, 'contact/contact.html', context)
+    return render(request, 'contact.html', context)

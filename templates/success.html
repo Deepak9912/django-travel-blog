@@ -1,0 +1,22 @@
+{% load static %}
+
+{% include "components/head.html" %}
+
+{% include "components/navbar.html" %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid header-container">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3 mb-3 text-center">
+            <h2>Thank you for your email.</h2>
+            <p>We will get back back to you as soon as possible</p>
+            <div>
+                <h5>
+                    <a href="{% url 'home' %}">Back to homepage</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
