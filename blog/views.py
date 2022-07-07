@@ -26,9 +26,9 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-# view for detailed blog post
-class DetailBlog(View):
 
+class DetailBlog(View):
+    """View to read the blog post in detail"""
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -78,6 +78,7 @@ class DetailBlog(View):
 # Delete a comment
 @login_required
 def delete_comment(request, comment_id):
+    """View to delete a comment"""
     comment =  get_object_or_404(Comment, id=comment_id)
     comment.delete()
     messages.success(request, 'The comment was deleted successfully')
@@ -85,8 +86,8 @@ def delete_comment(request, comment_id):
 
 
 
-#Edit a comment
 class EditComment(UpdateView):
+    """View to edit a comment"""
     model = Comment
     template_name = 'edit_comment.html'
     form_class = CommentForm
