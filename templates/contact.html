@@ -16,8 +16,8 @@
     </p>
     <div class="row">
       <div class="col-md-8 mb-md-0 mb-5">
-        <form action="{% url 'contact' %}">
-          {% csrf_token %}
+        <form action="{% url 'contact' %}" method="post">
+          {% csrf_token %} {{ form }}
           <div id="contact">
             <div class="row">
               <div class="col-md-6">
