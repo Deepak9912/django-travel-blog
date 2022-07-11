@@ -4,6 +4,10 @@
     color: #030910;
 }
 
+.carousel-item {
+    height: 80vh;
+}
+
 .image-container {
     position: relative;
 }
