@@ -1,9 +1,7 @@
-{% load static %}
+{% extends "base.html" %}
 
-{% include "components/head.html" %}
 
-{% include "components/navbar.html" %}
-
+{% block content %}
 
     {% load crispy_forms_tags %}
     <div class="bloghead">
@@ -126,6 +124,4 @@
             </div>
         </div>
     </div>
-    
-    {% include "components/footer.html" %}
-</body>
+    {%endblock%}
