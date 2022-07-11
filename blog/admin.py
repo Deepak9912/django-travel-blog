@@ -24,6 +24,3 @@ class CommentAdmin(admin.ModelAdmin):
     def approved_comments(self, request, queryset):
         queryset.update(approved=True)
 
-@admin.register(Contact)
-class ContactAdmin(admin.ModelAdmin):
-    search_field = ('name', 'email', 'message')
