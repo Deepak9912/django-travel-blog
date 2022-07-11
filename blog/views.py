@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views import generic, View
 from .models import Post, Comment
-from .forms import CommentForm, ContactForm
+from .forms import CommentForm
 from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.mail import send_mail, BadHeaderError
