@@ -51,12 +51,3 @@ class Comment(models.Model):
         """to set absolute URL"""
         return reverse('detail_blog', args=[self.post.slug])
 
-
-class Contact(models.Model):
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    message = models.TextField()
-
-    def __str__(self):
-        return self.name
-
