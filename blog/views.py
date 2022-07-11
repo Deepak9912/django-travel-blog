@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect, resol
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views import generic, View
-from .models import Post, Contact, Comment
+from .models import Post, Comment
 from .forms import CommentForm, ContactForm
 from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect, HttpResponse
