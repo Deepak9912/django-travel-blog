@@ -10,5 +10,3 @@ urlpatterns = [
     path('<slug:slug>/', views.DetailBlog.as_view(), name='detail_blog'),  
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
