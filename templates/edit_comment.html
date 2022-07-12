@@ -1,9 +1,6 @@
-{% load static %}
+{% extends "base.html" %}
 
-{% include "components/head.html" %}
-
-{% include "components/navbar.html" %}
-
+{% block content %}
 {% load crispy_forms_tags %}
 
 <div class="container mt-5">
@@ -19,5 +16,4 @@
         </div>
     </div>
 </div>
-
-</body>
+{%endblock%}
