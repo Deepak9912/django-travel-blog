@@ -1,4 +1,11 @@
 /* index.html page */
+.logo {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
+
+
 .post-link {
     text-decoration: none;
     color: #030910;
