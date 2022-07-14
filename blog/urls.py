@@ -9,4 +9,3 @@ urlpatterns = [
     path('edit_comment/<int:pk>', views.EditComment.as_view(), name='edit_comment'),
     path('<slug:slug>/', views.DetailBlog.as_view(), name='detail_blog'),  
 ]
-
