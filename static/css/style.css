@@ -1,7 +1,7 @@
 /* base.html page */
 
 body {
-    background: #000;
+    background: #fafafa;
   }
   
   .section-padding {
@@ -75,7 +75,7 @@ body {
   }
   
   /* responsive navbar and carousel */
-  @media only screen and (min-width: 780px) and (max-width: 1000px) {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
       bottom: 360px;
     }
@@ -84,7 +84,7 @@ body {
     }
   }
   
-  @media only screen and (max-width: 780px) {
+  @media only screen and (max-width: 767px) {
     .navbar-nav {
       text-align: center;
     }
