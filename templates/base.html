@@ -8,57 +8,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Blog</title>
-    <!-- Bootstrap ICONS -->
-    <link
-      rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">ha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
+  <!-- Bootstrap ICONS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'bootstrap_css/bootstrap_theme.css' %}">
 </head>
 
 <body>
   <!--navbar-->
-  <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"> 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Explorer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav d-flex align-items-end justify-content-end text-uppercase ms-auto text-light">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="home-page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="contact-page" href="{% url 'contact' %}">Contact us</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    <h5 class="text-light text-capitalize"> <a href="{% url 'home' %}"><i class="fas fa-user"></i></a>
-                        {{user.username}}</h5>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </nav>   -->
-  <!--navbar ends-->
-  <!--new navbar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}"><span class="text-warning">Explore</span>world!</a>
@@ -92,123 +53,77 @@
       </div>
     </div>
   </nav>
-  <!--new navbar ends-->
-  <!--hero section
-  <div class="hero-section">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{% static 'assets/img/carousel/1.jpeg' %}" class="d-block w-100" alt="beach-image">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Why travel??</h3>
-            <p>To relieve stress and boost mental health</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="{% static 'assets/img/carousel/2.jpg' %}" class="d-block w-100" alt="japan-image">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Why travel??</h3>
-            <p>It exposes us to different cultures and ancient traditions.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="{% static 'assets/img/carousel/3.jpeg' %}" class="d-block w-100" alt="light-house-image">
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Why travel??</h3>
-            <p>Travel Makes You Physically Healthier.</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>carousel-->
+  <!--navbar ends-->
+  <!--carousel-->
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="{% static 'assets/img/carousel/1.jpeg' %}" class="d-block w-100" alt="light-house-image">
-            <div class="carousel-caption">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first</p>
-                <a href="#" class="btn btn-warning mt-3">Read more!!</a>
-            </div>
+      <div class="carousel-item active">
+        <img src="{% static 'assets/img/carousel/1.jpeg' %}" class="d-block w-100" alt="light-house-image">
+        <div class="carousel-caption">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first</p>
+          <a href="#" class="btn btn-warning mt-3">Read more!!</a>
         </div>
-        <div class="carousel-item">
-          <img src="{% static 'assets/img/carousel/2.jpg' %}" class="d-block w-100" alt="light-house-image">
-            <div class="carousel-caption">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-                <a href="#" class="btn btn-warning mt-3">Read more!!</a>
-            </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/carousel/2.jpg' %}" class="d-block w-100" alt="light-house-image">
+        <div class="carousel-caption">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+          <a href="#" class="btn btn-warning mt-3">Read more!!</a>
         </div>
-        <div class="carousel-item">
-          <img src="{% static 'assets/img/carousel/3.jpeg' %}" class="d-block w-100" alt="light-house-image">
-            <div class="carousel-caption">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-                <a href="#" class="btn btn-warning mt-3">Read more!!</a>
-            </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'assets/img/carousel/3.jpeg' %}" class="d-block w-100" alt="light-house-image">
+        <div class="carousel-caption">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+          <a href="#" class="btn btn-warning mt-3">Read more!!</a>
         </div>
+      </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
     </button>
-</div>
+  </div>
   <!--carousel end-->
   <!--about-->
-  <section id="about" class="about-section-padding mt-3">
+  <section id="about" class="about-section-padding my-3">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 com-md-12 col-12">
-                <div class="about-image">
-                    <img src="{% static 'assets/img/about.jpeg' %}" alt="" class="img-fluid">
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-                <div class="about-text">
-                    <h2>We provide the best <br>Travel blogs</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eaque impedit nobis, labore
-                        vero deleniti, enim cumque repellat voluptatem minima necessitatibus. Sed ut eius amet
-                        accusamus. Sint laboriosam dolore iste odio cupiditate natus quos recusandae tempore? Cumque
-                        nemo rem eos accusantium, accusamus commodi ea cum doloribus dolores illo aliquid provident?
-                    </p>
-                    <a href="#" class="btn btn-warning mt-3">Read more!!</a>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-4 com-md-12 col-12 mt-3">
+          <div class="about-image">
+            <img src="{% static 'assets/img/about.jpg' %}" alt="about-image" class="img-fluid">
+          </div>
         </div>
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5">
+          <div class="about-text">
+            <h2>We provide the best <br>Travel blogs</h2>
+            <p>Urban Travel Blog is a collective blog of expert travel writers, headed up by experienced travel journalist and editor Duncan Rhodes, who report on trends, experiences, festivals and nocturnal adventures in cities around Europe and the world.
+
+              We publish lovingly-compiled ‘Long Weekend’ city guides to all our favourite destinations, as well as fresh and insightful feature articles on the quirkiest crazes, the most intriguing experiences and the best nightlife our boundless curiosity can uncover. 
+              
+              City breaks are what we live for most of all, and apart from our aforementioned Long Weekend guides, we also list our favourite cities according to theme. Be sure to drop by our favourite budget breaks and romantic destinations.
+            </p>
+            <a href="#" class="btn btn-warning mt-2">Read our blogs!!</a>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
   <!--about end-->
 
   {% block content %}
@@ -238,8 +153,8 @@
 
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-  crossorigin="anonymous"></script>
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
   <script>
     // Settimeout to dismiss the alert box

@@ -74,6 +74,10 @@ body {
     height: 500px;
   }
   
+  .about-section-padding{
+    padding: 20px 0;
+  }
+
   /* responsive navbar and carousel */
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
