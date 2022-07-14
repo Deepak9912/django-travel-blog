@@ -1,159 +1,168 @@
 /* base.html page */
 
 body {
-    background: #fafafa;
-  }
-  
-  .section-padding {
-    padding: 100px 0;
-  }
-  
-  .carousel-item {
-    height: 100vh;
-    min-height: 300px;
-  }
-  
+  background: #fafafa;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+}
+
+.carousel-caption {
+  bottom: 220px;
+  z-index: 2;
+}
+
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar-light .navbar-brand {
+  color: #000;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+  color: #000;
+}
+
+.navbar-light .navbar-nav .navbar-link {
+  color: #000;
+}
+
+.w-100 {
+  height: 100vh;
+}
+
+.card img {
+  height: 500px;
+}
+
+.about-section-padding {
+  padding: 20px 0;
+}
+
+
+.text-clr{
+  color: red;
+}
+/* responsive navbar and carousel */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .carousel-caption {
-    bottom: 220px;
-    z-index: 2;
-  }
-  
-  .carousel-caption h5 {
-    font-size: 45px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 25px;
-  }
-  
-  .carousel-caption p {
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9;
-  }
-  
-  .carousel-inner::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-  
-  .navbar-nav a {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  
-  .navbar-light .navbar-brand {
-    color: #000;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-  
-  .navbar-light .navbar-brand:focus,
-  .navbar-light .navbar-brand:hover {
-    color: #000;
-  }
-  
-  .navbar-light .navbar-nav .navbar-link {
-    color: #000;
-  }
-  
-  .w-100 {
-    height: 100vh;
-  }
-  
-  .card img {
-    height: 500px;
-  }
-  
-  .about-section-padding{
-    padding: 20px 0;
+    bottom: 360px;
   }
 
-  /* responsive navbar and carousel */
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .carousel-caption {
-      bottom: 360px;
-    }
-    .carousel-caption p {
-      width: 100%;
-    }
+  .carousel-caption p {
+    width: 100%;
   }
-  
-  @media only screen and (max-width: 767px) {
-    .navbar-nav {
-      text-align: center;
-    }
-    .carousel-caption {
-      bottom: 120px;
-    }
-    .carousel-caption h5 {
-      font-size: 17px;
-    }
-    .carousel-caption a {
-      padding: 10px 15px;
-    }
-    .carousel-caption p {
-      width: 100%;
-      line-height: 1.8;
-      font-size: 20px;
-    }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
   }
-  
+
+  .carousel-caption {
+    bottom: 120px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+
+  .carousel-caption a {
+    padding: 10px 15px;
+  }
+
+  .carousel-caption p {
+    width: 100%;
+    line-height: 1.8;
+    font-size: 20px;
+  }
+}
+
 
 .post-link {
-    text-decoration: none;
-    color: #030910;
+  text-decoration: none;
+  color: #030910;
 }
 
 .image-container {
-    position: relative;
+  position: relative;
 }
 
 .image-detail {
-    position: absolute;
-    bottom: 10%;
-    min-width: 30%;
-    background-color: #0ecec7;
+  position: absolute;
+  bottom: 10%;
+  min-width: 30%;
+  background-color: #0ecec7;
 }
 
 .author {
-    color: rgb(249, 244, 244);
-    margin: 5px;
-    text-transform: uppercase;
-    font-weight: 700;
+  color: rgb(249, 244, 244);
+  margin: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.sidebar{
-    box-shadow: 0 16px 48px #E3E7EB;
-    float: right;
-    margin: 2%;
+.sidebar {
+  box-shadow: 0 16px 48px #E3E7EB;
+  float: right;
+  margin: 2%;
 }
 
 
 .card-body {
-    border: none;
-    margin-top: 5px;
+  border: none;
+  margin-top: 5px;
 }
 
 .container {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .signup-style {
-    height: 80vh;
+  height: 80vh;
 }
 
 
 /* Contact form */
 .form {
-    height: 100vh;
+  height: 100vh;
 }
