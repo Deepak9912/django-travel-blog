@@ -78,10 +78,26 @@ body {
   padding: 20px 0;
 }
 
-
-.text-clr{
+.text-clr {
   color: red;
 }
+
+/* post detail page */
+.bloghead {
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.blog-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+
 /* responsive navbar and carousel */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .carousel-caption {
