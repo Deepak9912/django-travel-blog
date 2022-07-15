@@ -97,6 +97,11 @@ body {
   height: 100%;
 }
 
+/* footer */
+footer{
+  margin-top: 3%;
+  padding: 20px 0;
+}
 
 /* responsive navbar and carousel */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
