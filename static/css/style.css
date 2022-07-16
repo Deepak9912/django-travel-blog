@@ -103,6 +103,19 @@ footer{
   padding: 20px 0;
 }
 
+/* contact form */
+.main-form {
+  height: 100vh;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 10px;
+}
+
+.form {
+  height: 60vh;
+  margin-top: 4rem;
+  padding: 2rem;
+}
 /* responsive navbar and carousel */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .carousel-caption {

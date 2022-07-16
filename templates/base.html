@@ -57,81 +57,20 @@
   </nav>
   <!--navbar ends-->
   <!--carousel-->
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{% static 'assets/img/carousel/1.jpeg' %}" class="d-block w-100" alt="beach-image">
-        <div class="carousel-caption">
-          <h5>Why should you travel?</h5>
-          <p>The ultimate guide to the best EU destinations</p>
-          <a href="#" class="btn btn-warning mt-3">Read more!!</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'assets/img/carousel/2.jpg' %}" class="d-block w-100" alt="japan-image">
-        <div class="carousel-caption">
-          <h5>Why should you travel?</h5>
-          <p>Update on language and local currency</p>
-          <a href="#" class="btn btn-warning mt-3">Read more!!</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'assets/img/carousel/3.jpeg' %}" class="d-block w-100" alt="light-house-image">
-        <div class="carousel-caption">
-          <h5>Why should you travel?</h5>
-          <p>Most famous EU destinations!!</p>
-          <a href="#" class="btn btn-warning mt-3">Read more!!</a>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <!--carousel end-->
+  {%  block carousel %}
+ 
+  {%  endblock %}
+  <!--carousel ends-->
   <!--about-->
-  <section id="about" class="about-section-padding my-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 com-md-12 col-12 mt-3">
-          <div class="about-image">
-            <img src="{% static 'assets/img/about.jpg' %}" alt="about-image" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-8 col-md-12 col-12 ps-lg-5">
-          <div class="about-text">
-            <h2>We provide the best <br>Travel blogs</h2>
-            <p>Urban Travel Blog is a collective blog of expert travel writers, headed up by experienced travel journalist and editor Duncan Rhodes, who report on trends, experiences, festivals and nocturnal adventures in cities around Europe and the world.
+  {%  block about %}
 
-              We publish lovingly-compiled ‘Long Weekend’ city guides to all our favourite destinations, as well as fresh and insightful feature articles on the quirkiest crazes, the most intriguing experiences and the best nightlife our boundless curiosity can uncover. 
-              
-              City breaks are what we live for most of all, and apart from our aforementioned Long Weekend guides, we also list our favourite cities according to theme. Be sure to drop by our favourite budget breaks and romantic destinations.
-            </p>
-            <a href="#" class="btn btn-warning mt-2">Read our blogs!!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--about end-->
-
+  {%  endblock %}
+  <!--about ends-->
+  <!--block content-->
   {% block content %}
 
   {% endblock %}
-
+<!--block content ends-->
 
   <!--footer-->
   <footer class="footer pt-4 bg-dark text-white">
@@ -153,13 +92,12 @@
       </div>
     </div>
   </footer>
-  <!--footer section ends-->
+  <!--footer ends-->
 
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-
 </body>
 
 </html>
