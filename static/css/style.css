@@ -85,7 +85,25 @@ body {
   color: red;
 }
 
+/* blog bard */
+.card-body a:hover{
+  color: #e84610;
+}
+
+.btn-blog{
+  background: #6c757d !important;
+}
+
 /* post detail page */
+.post-detail{
+  margin-top: 5%;
+}
+
+.btn-secondary:hover{
+  background-color: #e84610 !important;
+}
+
+
 .bloghead {
   height: 80vh;
   overflow: hidden;
