@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'bootstrap_css/bootstrap_theme.css' %}">
 </head>
@@ -57,67 +57,63 @@
   </nav>
   <!--navbar ends-->
   <!--carousel-->
-  {%  block carousel %}
- 
-  {%  endblock %}
+  {% block carousel %}
+
+  {% endblock %}
   <!--carousel ends-->
   <!--about-->
-  {%  block about %}
+  {% block about %}
 
-  {%  endblock %}
+  {% endblock %}
   <!--about ends-->
   <!--block content-->
   {% block content %}
 
   {% endblock %}
-<!--block content ends-->
+  <!--block content ends-->
 
   <!--footer-->
   <footer class="container-fluid bg-dark text-light">
     <div class="row" id="footer-details">
-        <div class="col-sm-4">
-            <h5 class="uppercase general-sub">About</h5>
-            <p class="inline-block">Travel blog website. The journey of a thousand miles begins with a single step. 
-                The blog website to share the experience.</p>
-        </div>
-        <div class="col-sm-4">
-            <h5 class="uppercase general-sub">Conatct us!</h5>
-            <p><i class="fa fa-map-marker-alt"></i> Blackrock Business Park, 1 Block 1, Carysfort
-              Ave, Blackrock, Co. Dublin</p>
-          <p><i class="fa fa-envelope"></i> Email : email@explorer.com</p>
-          <p><i class="fa fa-phone"></i> Tel. +353 (01) 539 7973</p>
-        </div>
-        <div class="col-sm-4">
-            <h5 class="uppercase general-sub">Social</h5>
-            <ul class="social-links list-inline">
-                <li class="list-inline-item">
-                  <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                  aria-label="Go to the facebook Tasty Blog page"><i
-                      class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                  aria-label="Go to the twitter Tasty Blog page"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                  aria-label="Go to the instagram Tasty Blog page"><i
-                      class="fab fa-instagram"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                  aria-label="Go to the facebook Tasty Blog page"><i
-                      class="fab fa-youtube"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
-                  aria-label="Go to the linjedin Tasty Blog page"><i
-                      class="fab fa-linkedin"></i></a>
-                </li>
-            </ul>
-        </div>
+      <div class="col-sm-4">
+        <h5 class="uppercase general-sub">About</h5>
+        <p class="inline-block">Travel blog website. The journey of a thousand miles begins with a single step.
+          The blog website to share the experience.</p>
+      </div>
+      <div class="col-sm-4">
+        <h5 class="uppercase general-sub">Conatct us!</h5>
+        <p><i class="fa fa-map-marker-alt"></i> Blackrock Business Park, 1 Block 1, Carysfort
+          Ave, Blackrock, Co. Dublin</p>
+        <p><i class="fa fa-envelope"></i> Email : email@explorer.com</p>
+        <p><i class="fa fa-phone"></i> Tel. +353 (01) 539 7973</p>
+      </div>
+      <div class="col-sm-4">
+        <h5 class="uppercase general-sub">Social</h5>
+        <ul class="social-links list-inline">
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+              aria-label="Go to the facebook Tasty Blog page"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+              aria-label="Go to the twitter Tasty Blog page"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+              aria-label="Go to the instagram Tasty Blog page"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+              aria-label="Go to the facebook Tasty Blog page"><i class="fab fa-youtube"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
+              aria-label="Go to the linjedin Tasty Blog page"><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
     </div>
-</footer>
+  </footer>
   <!--footer ends-->
 
   <!-- Bootstrap core JS-->
