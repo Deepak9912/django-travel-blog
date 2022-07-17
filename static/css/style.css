@@ -97,6 +97,7 @@ body {
 /* post detail page */
 .post-detail{
   margin-top: 5%;
+  
 }
 
 .btn-secondary:hover{
@@ -154,7 +155,8 @@ footer {
 }
 /* contact form */
 .form {
-  height: 60vh;
+  height: 80vh;
+  margin: 20px 5px;
 }
 
 .contact-heading {
