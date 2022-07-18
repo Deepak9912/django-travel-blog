@@ -162,3 +162,34 @@ User can click on an edit button to edit their comment. User can only edit or de
 ![delete](https://user-images.githubusercontent.com/93731898/179617049-12977779-ddd4-40a9-be5c-cd5e64ea1564.PNG)
 
 Similiar to edit a comment, user can click on a delete button and if they click on delete button, they will get a pop up window asking them if they wish to delete the comment. User can only delete their own comment.
+
+
+### Admin Panel/ Superuser
+
+![admin](https://user-images.githubusercontent.com/93731898/179617976-ef120f41-4943-4b7f-ba5d-2b541b351a6d.PNG)
+
+On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and delete the following ones:
+1. Posts
+2. Comments
+3. Contact emails
+
+As admin/superuser I can also approve comments, approve posts and change the status and give other permissions to the users to post a blog.
+
+
+## Technologies used
+
+* Languages Used
+1. [HTML5](https://www.w3schools.com/html/html_intro.asp)
+2. [CSS3](https://www.w3schools.com/css/default.asp)
+3. [JavaScript](https://www.w3schools.com/js/default.asp)
+4. [Python](https://www.w3schools.com/python/default.asp)
+5. [Django](https://www.djangoproject.com/)
+
+* Django Packages
+1. [Gunicorn](https://gunicorn.org/) - As the server for Heroku
+2. [Cloudinary](https://cloudinary.com/) - To host the static and media files
+3. [dj-database-url](https://pypi.org/project/dj-database-url/) - To parse the database URL from the environment variables in Heroku
+4. [psycopg2](https://pypi.org/project/psycopg2/) - As an adaptor for Python and PostgreSQL databases
+5. [Summernote](https://summernote.org/) - As a text editer
+6. [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - For authentication, registration, account management
+7. [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) - To style the forms
