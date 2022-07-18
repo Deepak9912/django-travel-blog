@@ -3,5 +3,8 @@ from django.contrib import admin
 # Register your models here.
 from .models import Contact
 
-admin.site.register(Contact)
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display= ('name', 'email', 'message', 'created_on', 'updated_on')
+
+admin.site.register(Contact, ContactAdmin)

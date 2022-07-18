@@ -4,7 +4,7 @@ from .models import Contact
 class ContactForm(ModelForm):
     class Meta:
         model = Contact
-        fields = ['name', 'email', 'subject', 'message']
+        fields = ['name', 'email', 'message']
 
     
     def __init__(self, *args, **kwargs):
@@ -22,3 +22,5 @@ class ContactForm(ModelForm):
         for field in self.fields:
             placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
+    
+    
