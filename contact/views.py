@@ -8,15 +8,14 @@ def ContactPage(request):
     """
     View for contact page
     """
-    print('reached function')
-
     form = ContactForm
     context = {'form': form}
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        print('posted')
         if form.is_valid():
             form.save()
-            return render(request, 'contact.html', context)
             
+    form = ContactForm
+    context = {'form': form}
+
     return render(request, 'contact.html', context)

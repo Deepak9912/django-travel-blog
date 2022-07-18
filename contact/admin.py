@@ -4,7 +4,6 @@ from django.contrib import admin
 from .models import Contact
 
 
-class ContactAdmin(admin.ModelAdmin):
+@admin.register(Contact)
+class CategoryAdmin(admin.ModelAdmin):
     list_display= ('name', 'email', 'message', 'created_on', 'updated_on')
-
-admin.site.register(Contact, ContactAdmin)
