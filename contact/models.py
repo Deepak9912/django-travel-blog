@@ -10,4 +10,4 @@ class Contact(models.Model):
     updated_on = models.DateTimeField(auto_now=True, null=True)
 
     def __str__(Self):
-        return self.email
+        return self.name
