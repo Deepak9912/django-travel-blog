@@ -13,12 +13,6 @@ from django.db.models import Q
 from django.contrib import messages
 
 
-def contact(request):
-    """to render the contact page"""
-    return render(request, 'contact.html')
-
-
-
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')

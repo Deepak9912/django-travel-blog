@@ -15,7 +15,7 @@
             </p>
 
             <div class="center-form">
-                <form action="{% url 'contact' %}" method="post">
+                <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
                     <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required>
                     <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email"
