@@ -142,12 +142,15 @@ On the website footer, users can see basic information about the blog such as co
 I have added an some interactive message to make the website more user friendly and improve user experience.
 
 - Comment on a post
+
 ![commentbox](https://user-images.githubusercontent.com/93731898/179616293-f1cfef34-0d67-4a08-9968-fe045e504d48.PNG)
+
 ![postcomment](https://user-images.githubusercontent.com/93731898/179616302-54967124-54af-4b75-b659-42c1fe96f99d.PNG)
 
 When users are logged in to the website they can comment on a post and after they submit the comment they will see a message at the top of the page saying "Thank you (username)! Your comment is awaiting approval".
 
 - Edit a comment
+
 ![edit box](https://user-images.githubusercontent.com/93731898/179616956-3e7482c0-8e4f-4d1d-abfc-7c56e1f178f4.PNG)
 
 ![commentbox](https://user-images.githubusercontent.com/93731898/179616973-276e1a3c-02c2-4141-9eed-97fc994242b9.PNG)
@@ -155,6 +158,7 @@ When users are logged in to the website they can comment on a post and after the
 User can click on an edit button to edit their comment. User can only edit or delete their comments, they cannot update or remove someone else's comment.
 
 - Delete a comment
+
 ![delete](https://user-images.githubusercontent.com/93731898/179617049-12977779-ddd4-40a9-be5c-cd5e64ea1564.PNG)
 
 Similiar to edit a comment, user can click on a delete button and if they click on delete button, they will get a pop up window asking them if they wish to delete the comment. User can only delete their own comment.
