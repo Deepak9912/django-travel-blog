@@ -86,21 +86,21 @@ body {
 }
 
 /* blog bard */
-.card-body a:hover {
+.card-body a:hover{
   color: #e84610;
 }
 
-.btn-blog {
+.btn-blog{
   background: #6c757d !important;
 }
 
 /* post detail page */
-.post-detail {
+.post-detail{
   margin-top: 5%;
-
+  
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover{
   background-color: #e84610 !important;
 }
 
@@ -153,7 +153,6 @@ footer {
 #footer-details {
   margin: 20px;
 }
-
 /* contact form */
 .form {
   height: 100vh;
@@ -242,7 +241,7 @@ button[type="submit"] {
     min-height: 240px;
     margin: 0 auto;
     max-width: 50%;
-  }
+}
 }
 
 @media only screen and (max-width: 767px) {
@@ -268,7 +267,13 @@ button[type="submit"] {
     font-size: 20px;
   }
 
-  .form {
+  .bloghead {
+    height: 60vh;
+    overflow: hidden;
+    display: block;
+  }
+
+  .form{
     margin-top: 20%;
     height: 100vh;
     padding: 10px 4px;

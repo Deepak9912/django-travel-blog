@@ -3,7 +3,7 @@
 {% block content %}
 
 {% load crispy_forms_tags %}
-<div class="container post-detail pt-4">
+<div class="container post-detail pt-5">
     <div class="row">
         <div class="col-sm-6">
             <a href="{% url 'home' %}" class="btn btn-secondary"><i class="fa fa-arrow-left"> Back to
@@ -14,13 +14,13 @@
 <div class="bloghead">
     <div class="container">
         <div class="row g-0">
-            <div class="blog-text col-md-3">
+            <div class="blog-text col-md-3 col-sm-12">
                 <!-- Post title -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author and post created date -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-9 blog-image">
+            <div class="d-none d-md-block col-md-9 col-sm-12 blog-image">
                 <!-- placeholder image will show if there is no image in post -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
