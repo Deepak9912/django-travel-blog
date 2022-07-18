@@ -58,6 +58,26 @@ All the imagees used in the project is related to the cities related to the blog
 
 ## Features
 
+### Navbar
+![navbar](https://user-images.githubusercontent.com/93731898/179614193-006bcdde-a93f-4978-b1aa-217ea0468e96.PNG)
+
+![logged-in](https://user-images.githubusercontent.com/93731898/179614202-23841874-f1de-443f-8549-e2f324817557.PNG)
+
+![mobile](https://user-images.githubusercontent.com/93731898/179614222-588f2c11-23bb-43a5-a690-36790e4bd3d6.PNG)
+
+![mobilenav](https://user-images.githubusercontent.com/93731898/179614232-c177eb52-ba12-4570-8a84-4e45edd0fc26.PNG)
+
+- The navigation bar is at the top of every page and consists of links to the other page such as login, logout, register and contact.
+- The options to Register or Log in will change to the option to log out once a user has logged in.
+- Once a user has signed in, more options such as username and the profile icon will be visible to them.
+- The navbar is fully responsive, collapsing into a hamburger menu when the screen size becomes smaller.
+
+### User Profile Icon
+![user](https://user-images.githubusercontent.com/93731898/179613273-bf933e49-6079-4729-b184-e30f56b291d1.PNG)
+
+User will be a profile icon and their name on the navbar when they are logged in.
+
+
 ### Homepage
 ![homepage](https://user-images.githubusercontent.com/93731898/179603514-4c07c310-29c8-46d3-aa8c-7dbfc1d10941.PNG)
 
@@ -81,6 +101,7 @@ At the top of the detail blog page, users can see a button to navigte back to or
 
 ### Detail blog page- Comments
 ![comments](https://user-images.githubusercontent.com/93731898/179607174-bc8896aa-4610-4eb4-a2e7-535143347b2a.PNG)
+![edit](https://user-images.githubusercontent.com/93731898/179611668-47bf9c7e-aeac-493d-adb9-1c96278a7083.PNG)
 
 At the bottom of the detail blog, users can read the comments posted by other users. If the user is logged in or is a superuser they have access to the buttons to edit or delete the comments.
 
@@ -93,3 +114,47 @@ The user must be logged in, in order to edit the comments otherwise they will no
 ![contact](https://user-images.githubusercontent.com/93731898/179608441-8b3dcc8c-7eba-46f8-a9f2-51a19c68c4c0.PNG)
 
 The Contact Page allows users to contact the admin using the contact form provided on the website, once the user clicks send button, the contact form will be submitted to the admin site which the admin has access to read.
+
+### Signup page
+![signup](https://user-images.githubusercontent.com/93731898/179612483-d71511ca-a3b8-4be9-bdfb-30fcf76ced82.PNG)
+
+On the Signup Page, a new user can sign up for the website by filling out and then submitting the form. Users are not require to provide an email address for signup, it is optional.
+
+### Login page
+![signup](https://user-images.githubusercontent.com/93731898/179612497-5d1f3b20-a80a-4213-a192-ab5093464abc.PNG)
+
+On the Login Page, users can log in to the website by entering their username and password and have access to website services for a user registered.
+
+### Logout page
+![logout](https://user-images.githubusercontent.com/93731898/179612973-07d1e27c-6c5e-4c65-85a9-cfc7c5aa534e.PNG)
+
+On the Logout Page, users can confirm that they wish to exit the website, when the user clicks on logout, they will get a pop up window, asking them if they want to logout.
+
+### Footer
+![footer](https://user-images.githubusercontent.com/93731898/179614820-a5cb13a8-a87e-4590-aaff-fdd7d3707c6e.PNG)
+
+![mobile footer](https://user-images.githubusercontent.com/93731898/179614849-e46ea401-8f41-4737-b770-6c6071c81226.PNG)
+
+On the website footer, users can see basic information about the blog such as contact details, address, social media links, and a quote about travel.
+
+
+## User Interaction
+I have added an some interactive message to make the website more user friendly and improve user experience.
+
+- Comment on a post
+![commentbox](https://user-images.githubusercontent.com/93731898/179616293-f1cfef34-0d67-4a08-9968-fe045e504d48.PNG)
+![postcomment](https://user-images.githubusercontent.com/93731898/179616302-54967124-54af-4b75-b659-42c1fe96f99d.PNG)
+
+When users are logged in to the website they can comment on a post and after they submit the comment they will see a message at the top of the page saying "Thank you (username)! Your comment is awaiting approval".
+
+- Edit a comment
+![edit box](https://user-images.githubusercontent.com/93731898/179616956-3e7482c0-8e4f-4d1d-abfc-7c56e1f178f4.PNG)
+
+![commentbox](https://user-images.githubusercontent.com/93731898/179616973-276e1a3c-02c2-4141-9eed-97fc994242b9.PNG)
+
+User can click on an edit button to edit their comment. User can only edit or delete their comments, they cannot update or remove someone else's comment.
+
+- Delete a comment
+![delete](https://user-images.githubusercontent.com/93731898/179617049-12977779-ddd4-40a9-be5c-cd5e64ea1564.PNG)
+
+Similiar to edit a comment, user can click on a delete button and if they click on delete button, they will get a pop up window asking them if they wish to delete the comment. User can only delete their own comment.
