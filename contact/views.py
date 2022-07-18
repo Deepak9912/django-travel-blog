@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from django.http import HttpResponse
+
 
 # Create your views here.
 def ContactPage(request):
@@ -10,7 +12,8 @@ def ContactPage(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'success.html')
+            return HttpResponse("<h1>Thank you for contacting us</h1>")
+            
 
     form = ContactForm()
     context = {'form': form}
