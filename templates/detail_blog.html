@@ -20,7 +20,7 @@
                 <!-- Post author and post created date -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-9 col-sm-12 blog-image">
+            <div class="col-md-9 mx-auto p-md-3 blog-image">
                 <!-- placeholder image will show if there is no image in post -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
