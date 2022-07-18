@@ -86,21 +86,21 @@ body {
 }
 
 /* blog bard */
-.card-body a:hover{
+.card-body a:hover {
   color: #e84610;
 }
 
-.btn-blog{
+.btn-blog {
   background: #6c757d !important;
 }
 
 /* post detail page */
-.post-detail{
+.post-detail {
   margin-top: 5%;
-  
+
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
   background-color: #e84610 !important;
 }
 
@@ -153,10 +153,11 @@ footer {
 #footer-details {
   margin: 20px;
 }
+
 /* contact form */
 .form {
-  height: 80vh;
-  margin: 20px 5px;
+  height: 100vh;
+  padding: 20x 5px !important;
 }
 
 .contact-heading {
@@ -178,53 +179,6 @@ button[type="submit"] {
   margin-bottom: 20px;
   background-color: #e84610;
   color: #fafafa;
-}
-
-
-/* responsive navbar and carousel */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .carousel-caption {
-    bottom: 360px;
-  }
-
-  .carousel-caption p {
-    width: 100%;
-  }
-
-  .center-form {
-    padding-top: 30px;
-    min-height: 240px;
-    margin: 0 auto;
-    max-width: 50%;
-}
-}
-
-@media only screen and (max-width: 767px) {
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .carousel-caption {
-    bottom: 120px;
-  }
-
-  .carousel-caption h5 {
-    font-size: 17px;
-  }
-
-  .carousel-caption a {
-    padding: 10px 15px;
-  }
-
-  .carousel-caption p {
-    width: 100%;
-    line-height: 1.8;
-    font-size: 20px;
-  }
-
-  .form{
-    margin-top: 28%;
-  }
 }
 
 
@@ -271,8 +225,52 @@ button[type="submit"] {
   height: 80vh;
 }
 
+/* responsive media query */
 
-/* Contact form */
-.form {
-  height: 100vh;
+/* responsive navbar and carousel */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .carousel-caption {
+    bottom: 360px;
+  }
+
+  .carousel-caption p {
+    width: 100%;
+  }
+
+  .center-form {
+    padding-top: 30px;
+    min-height: 240px;
+    margin: 0 auto;
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .carousel-caption {
+    bottom: 120px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+
+  .carousel-caption a {
+    padding: 10px 15px;
+  }
+
+  .carousel-caption p {
+    width: 100%;
+    line-height: 1.8;
+    font-size: 20px;
+  }
+
+  .form {
+    margin-top: 20%;
+    height: 100vh;
+    padding: 10px 4px;
+  }
 }
