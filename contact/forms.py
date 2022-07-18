@@ -15,7 +15,6 @@ class ContactForm(ModelForm):
         placeholders = {
             'name': 'Please enter your full name',
             'email': 'Please enter your email address',
-            'subject': 'Please enter the subject of your message',
             'message': 'Write your query here..',
         }
 
