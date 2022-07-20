@@ -196,29 +196,29 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 
 * Frameworks - Libraries - Programs Used
-- [Bootstrap](https://getbootstrap.com/)
+1 [Bootstrap](https://getbootstrap.com/)
   Was used to style the website, add responsiveness and interactivity
-- [Git](https://git-scm.com/)
+2 [Git](https://git-scm.com/)
   Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
-- [GitHub](https://github.com/)
+3 [GitHub](https://github.com/)
   GitHub is used to store the project's code after being pushed from Git
-- [PostgreSQL](https://www.postgresql.org/)
+4 [PostgreSQL](https://www.postgresql.org/)
   Database used through heroku.
-- [VSCode](https://code.visualstudio.com/)
+5 [VSCode](https://code.visualstudio.com/)
   VSCode was used to create and edit the website
-- [PEP8](http://pep8online.com/)
+6 [PEP8](http://pep8online.com/)
   PEP8 was used to validate all the Python code
-- [W3C- HTML](https://validator.w3.org/)
+7 [W3C- HTML](https://validator.w3.org/)
   W3C- HTML was used to validate all the HTML code
-- [W3C- CSS](https://jigsaw.w3.org/css-validator/)
+8 [W3C- CSS](https://jigsaw.w3.org/css-validator/)
   W3C - CSS was used to validate the CSS code
-- [Fontawesome](https://fontawesome.com/)
+9 [Fontawesome](https://fontawesome.com/)
   To add icons to the website
-- [Google chrome Dev tool](https://developer.chrome.com/docs/devtools/)
+10 [Google chrome Dev tool](https://developer.chrome.com/docs/devtools/)
   To check App responsiveness and debugging
-- [Pexels](https://www.pexels.com/)
+11 [Pexels](https://www.pexels.com/)
   To download the pictures
-- [Heroku](https://dashboard.heroku.com/)
+12 [Heroku](https://dashboard.heroku.com/)
   Heroku was used to deploy the live project
   
   
