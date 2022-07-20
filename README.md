@@ -149,7 +149,12 @@ I have added an some interactive message to make the website more user friendly 
 
 ![postcomment](https://user-images.githubusercontent.com/93731898/179616302-54967124-54af-4b75-b659-42c1fe96f99d.PNG)
 
-When users are logged in to the website they can comment on a post and after they submit the comment they will see a message at the top of the page saying "Thank you (username)! Your comment is awaiting approval".
+  When users are logged in to the website they can comment on a post and after they submit the comment they will see a message at the top of the page saying "Thank you (username)! Your comment is awaiting approval".
+
+- Like/Unlike a post
+  Logged in users can like or unlike the post
+  
+![Capture](https://user-images.githubusercontent.com/93731898/180083003-468b5669-9caa-49fa-8bb7-d1d816b87f8b.PNG)
 
 - Edit a comment
 
@@ -157,13 +162,13 @@ When users are logged in to the website they can comment on a post and after the
 
 ![commentbox](https://user-images.githubusercontent.com/93731898/179616973-276e1a3c-02c2-4141-9eed-97fc994242b9.PNG)
 
-User can click on an edit button to edit their comment. User can only edit or delete their comments, they cannot update or remove someone else's comment.
+  User can click on an edit button to edit their comment. User can only edit or delete their comments, they cannot update or remove someone else's comment.
 
 - Delete a comment
 
 ![delete](https://user-images.githubusercontent.com/93731898/179617049-12977779-ddd4-40a9-be5c-cd5e64ea1564.PNG)
 
-Similiar to edit a comment, user can click on a delete button and if they click on delete button, they will get a pop up window asking them if they wish to delete the comment. User can only delete their own comment.
+  Similiar to edit a comment, user can click on a delete button and if they click on delete button, they will get a pop up window asking them if they wish to delete      the comment. User can only delete their own comment.
 
 
 ### Admin Panel/ Superuser
@@ -240,3 +245,51 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 [Testing results](https://github.com/Deepak9912/django-travel-blog/blob/main/Testind.md)
 
+
+## Creating the Django app
+
+1. Go to the Code Institute Gitpod Full Template Template
+2. Click on Use This Template
+3. Once the template is available in your repository click on Gitpod
+4. When the image for the template and the Gitpod are ready open a new terminal to start a new Django App
+5. Install Django and gunicorn: pip3 install django gunicorn
+6. Install supporting database libraries dj_database_url and psycopg2 library: pip3 install dj_database_url psycopg2
+7. Create file for requirements: in the terminal window type pip freeze --local > requirements.txt
+8. Create project: in the terminal window type django-admin startproject your_project_name
+9. Create app: in the terminal window type python3 manage.py startapp your_app_name
+10. Add app to the list of installed apps in settings.py file: you_app_name
+11. Migrate changes: in the terminal window type python3 manage.py migrate
+12. Run the server to test if the app is installed, in the terminal window type python3 manage.py runserver
+13. If the app has been installed correctly the window will display The install worked successfully! Congratulations!
+
+
+## Deployment of This Project
+
+*This site was deployed by completing the following steps:
+
+1. Log in to Heroku or create an account
+2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+3. You must enter a unique app name
+4. Next select your region
+5. Click on the Create App button
+6. Click in resources and select Heroku Postgres database
+7. Click Reveal Config Vars and add a new record with SECRET_KEY
+8. Click Reveal Config Vars and add a new record with the CLOUDINARY_URL
+9. Click Reveal Config Vars and add a new record with the DISABLE_COLLECTSTATIC = 1
+10. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+11. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+12. Scroll to the top of the page and choose the Deploy tab
+13. Select Github as the deployment method
+14. Confirm you want to connect to GitHub
+15. Search for the repository name and click the connect button
+16. Scroll to the bottom of the deploy page and select the preferred deployment type
+17. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+
+
+## Final Deployment
+
+1. Create a runtime.txt python-3.8.13
+2. Create a Procfile web: gunicorn your_project_name.wsgi
+3. When development is complete change the debug setting to: DEBUG = False in settings.py
+4. In this project the summernote editor was used so for this to work in Heroku add: X_FRAME_OPTIONS = SAMEORIGIN to settings.py.
+5. In Heroku settings, delete the config vars for DISABLE_COLLECTSTATIC = 1
