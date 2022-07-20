@@ -6,6 +6,8 @@ A travel blog website, where a user can post their travel related blogs. When th
 
 The site is fully responsive and was built using the Django framework in Python.
 
+![Screenshot_20220720_205821](https://user-images.githubusercontent.com/93731898/180079448-64f7e362-3c8c-4719-bac2-9055d4ad23ff.png)
+
 The live site has been deployed [here](https://travelblog2022.herokuapp.com/).
 
 ## User Experience (UX)
