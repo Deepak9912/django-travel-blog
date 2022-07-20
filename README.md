@@ -196,7 +196,7 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 
 * Frameworks - Libraries - Programs Used
-* 
+
 1 [Bootstrap](https://getbootstrap.com/)
   Was used to style the website, add responsiveness and interactivity
   
