@@ -196,28 +196,40 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 
 * Frameworks - Libraries - Programs Used
+* 
 1 [Bootstrap](https://getbootstrap.com/)
   Was used to style the website, add responsiveness and interactivity
+  
 2 [Git](https://git-scm.com/)
   Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
+  
 3 [GitHub](https://github.com/)
   GitHub is used to store the project's code after being pushed from Git
+  
 4 [PostgreSQL](https://www.postgresql.org/)
   Database used through heroku.
+  
 5 [VSCode](https://code.visualstudio.com/)
   VSCode was used to create and edit the website
+  
 6 [PEP8](http://pep8online.com/)
   PEP8 was used to validate all the Python code
+  
 7 [W3C- HTML](https://validator.w3.org/)
   W3C- HTML was used to validate all the HTML code
+  
 8 [W3C- CSS](https://jigsaw.w3.org/css-validator/)
   W3C - CSS was used to validate the CSS code
+  
 9 [Fontawesome](https://fontawesome.com/)
   To add icons to the website
+  
 10 [Google chrome Dev tool](https://developer.chrome.com/docs/devtools/)
   To check App responsiveness and debugging
+  
 11 [Pexels](https://www.pexels.com/)
   To download the pictures
+  
 12 [Heroku](https://dashboard.heroku.com/)
   Heroku was used to deploy the live project
   
