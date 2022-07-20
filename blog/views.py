@@ -76,7 +76,7 @@ class DetailBlog(View):
 
 
 # To like a post
-class PostLike(View):
+class LikePost(View):
     """View to like or unlike the post"""
     
     def post(self, request, slug, *args, **kwargs):
