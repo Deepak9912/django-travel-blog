@@ -301,3 +301,14 @@ button[type="submit"] {
     padding: 10px 4px;
   }
 }
+
+@media
+_containers.scss:21
+.container, .container-md, .container-sm {
+    max-width: 100%;
+}
+@media
+_containers.scss:21
+.container, .container-sm {
+    max-width: 100%;
+}
