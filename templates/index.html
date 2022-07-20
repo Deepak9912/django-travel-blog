@@ -39,7 +39,8 @@
                         </a>
                     </div>
                     <hr>
-                    <p class="card-text text-muted">{{ post.created_on}} </p>
+                    <p class="card-text text-muted">{{ post.created_on}} <i class="far fa-heart"></i>
+                        {{ post.number_of_likes }}</p>
                 </div>
             </div>
             {% endfor %}
