@@ -193,3 +193,36 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 5. [Summernote](https://summernote.org/) - As a text editer
 6. [Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - For authentication, registration, account management
 7. [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) - To style the forms
+
+
+* Frameworks - Libraries - Programs Used
+- [Bootstrap](https://getbootstrap.com/)
+  Was used to style the website, add responsiveness and interactivity
+- [Git](https://git-scm.com/)
+  Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
+- [GitHub](https://github.com/)
+  GitHub is used to store the project's code after being pushed from Git
+- [PostgreSQL](https://www.postgresql.org/)
+  Database used through heroku.
+- [VSCode](https://code.visualstudio.com/)
+  VSCode was used to create and edit the website
+- [PEP8](http://pep8online.com/)
+  PEP8 was used to validate all the Python code
+- [W3C- HTML](https://validator.w3.org/)
+  W3C- HTML was used to validate all the HTML code
+- [W3C- CSS](https://jigsaw.w3.org/css-validator/)
+  W3C - CSS was used to validate the CSS code
+- [Fontawesome](https://fontawesome.com/)
+  To add icons to the website
+- [Google chrome Dev tool](https://developer.chrome.com/docs/devtools/)
+  To check App responsiveness and debugging
+- [Pexels](https://www.pexels.com/)
+  To download the pictures
+- [Heroku](https://dashboard.heroku.com/)
+  Heroku was used to deploy the live project
+  
+  
+## Testing
+
+[Testing results](https://github.com/Deepak9912/django-travel-blog/blob/main/Testind.md)
+
