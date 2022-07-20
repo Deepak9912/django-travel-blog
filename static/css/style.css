@@ -156,7 +156,7 @@ footer {
 
 /* contact form */
 .form {
-  height: 100vh;
+  height: 60vh;
   padding: 20px 5px !important;
 }
 
@@ -242,6 +242,10 @@ button[type="submit"] {
     min-height: 240px;
     margin: 0 auto;
     max-width: 50%;
+  }
+
+  .form {
+    height: 100vh;
   }
 }
 
