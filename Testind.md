@@ -1,6 +1,6 @@
 ## Manual Testing
 ______________________________
-Back to [Readme](https://github.com/Deepak9912/django-travel-blog)
+Back to *[Readme](https://github.com/Deepak9912/django-travel-blog)*
 
 * I tested continuously throughout the development of the project.Each view was tested regularly. When i did not get the desired outcome, i did debugging the fixed the issues.
 
@@ -67,7 +67,9 @@ A few errors were raised in the settings.py file, however these were related to 
 
 ### CSS Validation
 
+
 ### Javascript Validation
 ![jsHint](https://user-images.githubusercontent.com/93731898/180004804-9863f864-3617-4780-b897-efb1dbc9d369.PNG)
 
 ### Lighthouse
+![lighthouse](https://user-images.githubusercontent.com/93731898/180081848-fe265411-3880-4a93-a49f-4b0efb2f4b44.PNG)
