@@ -293,3 +293,23 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 3. When development is complete change the debug setting to: DEBUG = False in settings.py
 4. In this project the summernote editor was used so for this to work in Heroku add: X_FRAME_OPTIONS = SAMEORIGIN to settings.py.
 5. In Heroku settings, delete the config vars for DISABLE_COLLECTSTATIC = 1
+
+## Credits
+
+### Content
+
+* All the travel blog content was taken from [Travel borg](https://www.travelblog.org/} and [Wikipedia]{https://www.wikipedia.org/)
+* All the images were taken from [Pexels](https://www.pexels.com/)
+* The webiste logo and design was build by me.
+
+### Information Sources / Resources
+
+* [W3Schools - Python](https://www.w3schools.com/python/)
+* [Stack overflow](https://stackoverflow.com/)
+* [Code Institute django blog](https://codeinstitute.net/ie/)
+* [Net ninja](https://www.youtube.com/watch?v=n-FTlQ7Djqc&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc)
+* [Django Central](https://djangocentral.com/building-a-blog-application-with-django/)
+
+### Special Thanks
+
+Special thanks to my mentor Spencer Barriball, my colleagues and tutor support team at Code Institute and Kasia Bogucka for their assistance throughout this project.
