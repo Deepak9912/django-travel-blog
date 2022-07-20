@@ -298,7 +298,7 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 ### Content
 
-* All the travel blog content was taken from [Travel borg](https://www.travelblog.org/} and [Wikipedia]{https://www.wikipedia.org/)
+* All the travel blog content was taken from [Travel borg](https://www.travelblog.org/) and [Wikipedia](https://www.wikipedia.org/)
 * All the images were taken from [Pexels](https://www.pexels.com/)
 * The webiste logo and design was build by me.
 
