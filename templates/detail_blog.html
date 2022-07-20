@@ -46,9 +46,11 @@
                                 <form class="d-inline" action="{% url 'like_post' post.slug %}" method="POST">
                                     {% csrf_token %}
                                     {% if liked %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                                        <i class="fas fa-heart"></i></button>
                                     {% else %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like">
+                                        <i class="far fa-heart"></i></button>
                                     {% endif %}
                                 </form>
                                 {% else %}

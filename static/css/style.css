@@ -225,6 +225,19 @@ button[type="submit"] {
   height: 80vh;
 }
 
+.btn-like {
+  color: #E84610;
+  border: none;
+  background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+  color: #E84610;
+  background: transparent;
+  border: none;
+}
+
 /* responsive media query */
 
 /* responsive navbar and carousel */
