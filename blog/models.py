@@ -50,4 +50,3 @@ class Comment(models.Model):
     def get_absolute_url(self):
         """to set absolute URL"""
         return reverse('detail_blog', args=[self.post.slug])
-

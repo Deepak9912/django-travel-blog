@@ -14,7 +14,7 @@ def ContactPage(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            
+
     form = ContactForm
     context = {'form': form}
 

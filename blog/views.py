@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect, resolve_url
+from django.shortcuts import(
+    render, get_object_or_404, reverse, redirect)
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.views import generic, View
@@ -20,7 +21,6 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-
 class DetailBlog(View):
     """View to read the blog post in detail"""
     def get(self, request, slug, *args, **kwargs):
@@ -38,7 +38,7 @@ class DetailBlog(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -73,11 +73,11 @@ class DetailBlog(View):
 @login_required
 def delete_comment(request, comment_id):
     """View to delete a comment"""
-    comment =  get_object_or_404(Comment, id=comment_id)
+    comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
     messages.success(request, 'The comment was deleted successfully')
-    return HttpResponseRedirect(reverse('detail_blog', args=[comment.post.slug]))
-
+    return HttpResponseRedirect
+    (reverse('detail_blog', args=[comment.post.slug]))
 
 
 class EditComment(UpdateView):
@@ -85,4 +85,4 @@ class EditComment(UpdateView):
     model = Comment
     template_name = 'edit_comment.html'
     form_class = CommentForm
-    success_message = 'Your comment is successfully updated'
+    success_message = 'The comment was successfully updated'

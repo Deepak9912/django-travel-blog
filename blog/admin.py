@@ -23,4 +23,3 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approved_comments(self, request, queryset):
         queryset.update(approved=True)
-
