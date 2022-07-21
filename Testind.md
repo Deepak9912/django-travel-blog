@@ -99,5 +99,6 @@ A few errors were raised in the settings.py file, however these were related to 
 - Whenever a user comments on a post or submits a book post the Superuser has to approve it before it will be displayed on the website. This functionality is working without issues.
 
 
-3. Existing bug
+3. Fixed bug
 
+- I continuously had issues with cloudinary and static files and could not deploy my project on heroku, i contacted tutors support team several times for the same issue and evenutally i created a new cloudinary account and new heroku app for the project and after that i was able to deploy my project.
