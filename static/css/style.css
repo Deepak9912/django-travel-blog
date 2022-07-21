@@ -263,6 +263,12 @@ button[type="submit"] {
     text-align: center;
   }
 
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 100%;
+  }
+  
   .carousel-caption {
     bottom: 120px;
   }
@@ -298,13 +304,10 @@ button[type="submit"] {
   }
 }
 
-@media
-_containers.scss:21
-.container, .container-md, .container-sm {
+@media only screen and (max-width: 576px) {
+
+  .container,
+  .container-sm {
     max-width: 100%;
-}
-@media
-_containers.scss:21
-.container, .container-sm {
-    max-width: 100%;
+  }
 }
