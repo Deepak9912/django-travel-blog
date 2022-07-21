@@ -250,7 +250,7 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 - I would like to create a profile page for the user where they can upload their pictures and personal details such as full name, email address and profile name.
 - The second future is to display a message to the user when they login, logout and sign up.
-- When the user sends an email, there is no message display that message has been emailed, i would to display a message and redirect them to the homepage.
+- When the user sends an email, there is no message display that message has been sent, i would like to display a message and redirect them to the homepage.
 - I would also like to update the categories for the travel blog as per destination such Europe travel blogs, US travel blogs and so on.
 
 
