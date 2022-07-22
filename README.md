@@ -2,7 +2,7 @@
 
 Project milestone 4 for Code Institute, Full-stack development program with Django framework:
 
-Aim of the project is to create a travel blog website, where a user can post their travel related blogs. When the user posts their blogs, it will be displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page.
+Aim of the project is to create a travel blog website, where a user can read travel blogs. Users can also like/unlike or comment on the post, it will be displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page.
 
 The site is fully responsive and was built using the Django framework in Python.
 
