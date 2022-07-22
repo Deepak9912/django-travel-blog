@@ -15,9 +15,10 @@ The live site has been deployed [here](https://travelblog2022.herokuapp.com/).
 - As a website user I can:
 1. Navigate the site and easily view the desired content.
 2. View a list of travel blogs and read them.
-3. Click on a blog to read the article on that blog.
-4. Register for an account to avail of the services offered to members.
-5. View comments on blogs so that I can read other users’ opinions.
+3. View the number of likes on post.
+4. Click on a blog to read the article on that blog.
+5. Register for an account to avail of the services offered to members.
+6. View comments on blogs so that I can read other users’ opinions.
 
 - As logged in website user, I can:
 1. Comment on blogs and give my opinion about the posts.
@@ -29,11 +30,12 @@ The live site has been deployed [here](https://travelblog2022.herokuapp.com/).
 1. Create and publish a new travel blog.
 2. Create draft blog posts that can be reviewed and finalised later.
 3. Create a new user, blogs and categories.
-4. Delete user, author, and comments.
-5. Approve user's comments.
-6. Delete a blog post.
-7. Delete a user and their posts.
-8. Change the website permissions for a user.
+4. Like or unlike a post.
+5. Delete user, author, and comments.
+6. Approve user's comments.
+7. Delete a blog post.
+8. Delete a user and their posts.
+9. Change the website permissions for a user.
 
 ## Agile Methodology
 All functionality and development of this project was managed using GitHub where Projects can be found [here](https://github.com/Deepak9912).
