@@ -57,7 +57,7 @@ The color scheme chosen for this project is mainly black and white using bootstr
 There was no special typography used in this project. I have only used in-built p, h1 & h2 typography to keep the website simple.
 
 ### Imagery
-All the imagees used in the project are related to the cities referenced in to the blogs. Only 4 images are static which are in the carousel section and about section. The remaining images will be uploaded by the author to the database.
+All the imagees used in the project are related to the cities referenced in to the blogs. Only 4 images are in the static folder which are in the carousel section and about section. The remaining images are uploaded by the superuser to the database through admin panel.
 
 
 ## Features
@@ -95,7 +95,7 @@ The about section gives a brief introduction about the website and the travel bl
 ### Homepage -Blog posts
 ![blogs](https://user-images.githubusercontent.com/93731898/179605558-67a1b94e-a827-497a-b11c-53a23fc115da.PNG)
 
-The blog posts section consists of all the travel blogs which a user can read. There are six blog posts and all the blog posts are written by the site admin.
+The blog posts section consists of all the travel blogs which a user can read. 
 
 ### Detail blog page
 ![detail-image](https://user-images.githubusercontent.com/93731898/179606732-fc822dbf-479c-48b4-a2b9-d1d99411a865.PNG)
@@ -117,7 +117,7 @@ If a user wishes to edit comments, by utiising the edit button, they must be log
 ### Contact page
 ![contact](https://user-images.githubusercontent.com/93731898/179608441-8b3dcc8c-7eba-46f8-a9f2-51a19c68c4c0.PNG)
 
-The Contact Page allows users to contact the admin using the contact form provided on the website. Once the user clicks the send button, the contact form will be submitted to the admin site where the administrator has the access to read form.
+The Contact Page allows users to contact the admin using the contact form provided on the website. Once the user clicks the send button, the contact form will be submitted to the admin site where the superuser has the access to read form.
 
 ### Signup page
 ![signup](https://user-images.githubusercontent.com/93731898/179612483-d71511ca-a3b8-4be9-bdfb-30fcf76ced82.PNG)
@@ -181,8 +181,6 @@ On the Admin Panel, as an admin/superuser I have full access to CRUD functionali
 1. Posts
 2. Comments
 3. Contact emails
-
-As admin/superuser I can also approve comments, approve posts, change the status and give other permissions to the users to post a blog.
 
 
 ## Technologies used
