@@ -1,8 +1,8 @@
 # Django-Travel-Blog
 
-Project milestone 4 for Code Institute Full-stack development program with Django framework:
+Project milestone 4 for Code Institute, Full-stack development program with Django framework:
 
-A travel blog website, where a user can post their travel related blogs. When the user posts their blogs, it will be displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page.
+Aim of the project is to create a travel blog website, where a user can post their travel related blogs. When the user posts their blogs, it will be displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page.
 
 The site is fully responsive and was built using the Django framework in Python.
 
@@ -13,7 +13,7 @@ The live site has been deployed [here](https://travelblog2022.herokuapp.com/).
 ## User Experience (UX)
 
 - As a website user I can:
-1. Navigate around the site and easily view the desired content.
+1. Navigate the site and easily view the desired content.
 2. View a list of travel blogs and read them.
 3. Click on a blog to read the article on that blog.
 4. Register for an account to avail of the services offered to members.
@@ -29,14 +29,14 @@ The live site has been deployed [here](https://travelblog2022.herokuapp.com/).
 1. Create and publish a new travel blog.
 2. Create draft blog posts that can be reviewed and finalised later.
 3. Create a new user, blogs and categories.
-4. Delete user, recipes, author, categories and comments.
+4. Delete user, author, and comments.
 5. Approve user's comments.
 6. Delete a blog post.
 7. Delete a user and their posts.
 8. Change the website permissions for a user.
 
 ## Agile Methodology
-All functionality and development of this project were managed using GitHub which Projects can be found [here](https://github.com/Deepak9912).
+All functionality and development of this project was managed using GitHub where Projects can be found [here](https://github.com/Deepak9912).
 
 ### The Scope
 
@@ -47,7 +47,7 @@ Main Site goals:
 4. To provide role-based permissions that allows user to interact with the website.
 
 ### Design
-The color scheme chosen for this project is mainly black and white using bootstrap colors. The text color on the navbar and footer is text-light, text-muted and text-wraning using bootstrap against a black background. The carousel section has white bold text color against a faded background image. 
+The color scheme chosen for this project is mainly black and white using bootstrap colors. The text color on the navbar and footer is text-light, text-muted and text-warning, using bootstrap against a black background. The carousel section has white bold text color against a faded background image. 
 
 ![color](https://user-images.githubusercontent.com/93731898/179424976-df48c8b6-63a0-425d-a2bb-c95a3ddf7cbf.PNG)
 
@@ -55,7 +55,7 @@ The color scheme chosen for this project is mainly black and white using bootstr
 There was no special typography used in this project. I have only used in-built p, h1 & h2 typography to keep the website simple.
 
 ### Imagery
-All the imagees used in the project is related to the cities related to the blog. Only 4 images are static which are in carousel section and about section. The remaining images will be uploaded by the author to the database.
+All the imagees used in the project are related to the cities referenced in to the blogs. Only 4 images are static which are in the carousel section and about section. The remaining images will be uploaded by the author to the database.
 
 
 ## Features
@@ -77,60 +77,60 @@ All the imagees used in the project is related to the cities related to the blog
 ### User Profile Icon
 ![user](https://user-images.githubusercontent.com/93731898/179613273-bf933e49-6079-4729-b184-e30f56b291d1.PNG)
 
-User will be a profile icon and their name on the navbar when they are logged in.
+User will have a profile icon and their name will appear alongside the profile icon when they are logged in.
 
 
 ### Homepage
 ![homepage](https://user-images.githubusercontent.com/93731898/179603514-4c07c310-29c8-46d3-aa8c-7dbfc1d10941.PNG)
 
-The main landing section welcomes user with a short message advertising what the website is about. There are three carousel images with a yellow button to navigate to blogs. When the user clicks on the button, they will be directed to the blog section where they read the blogs.
+The main landing section welcomes the user with a short message advertising what the website is about. There are three carousel images with a yellow button to bring the user to the blog section. When the user clicks on the yellow button, they will be directed to the blog section where they can read the blogs.
 
 ### Homepage -About
 ![About](https://user-images.githubusercontent.com/93731898/179605542-b64ca535-d16f-4b48-82e0-adcaf6d57a71.PNG)
 
-The about section gives a brief introduction about the website and the travel blogs. This section has a yellow button similar to homepage where a used can click and they will be directed to the blog section.
+The about section gives a brief introduction about the website and the travel blogs. This section has a yellow button, similar to the homepage, and once clicked by a user, they will be directed to the blog section.
 
 ### Homepage -Blog posts
 ![blogs](https://user-images.githubusercontent.com/93731898/179605558-67a1b94e-a827-497a-b11c-53a23fc115da.PNG)
 
-The blog posts section consists of all the travel blogs which user can read. There are six blog posts and all the blog posts are written by the site admin.
+The blog posts section consists of all the travel blogs which a user can read. There are six blog posts and all the blog posts are written by the site admin.
 
 ### Detail blog page
 ![detail-image](https://user-images.githubusercontent.com/93731898/179606732-fc822dbf-479c-48b4-a2b9-d1d99411a865.PNG)
 ![detail-text](https://user-images.githubusercontent.com/93731898/179606752-c33c75cf-68d8-4ecf-b6a1-d7a3cee324b4.PNG)
 
-At the top of the detail blog page, users can see a button to navigte back to orginal page, title of the blog post which is name of the blog city and the image of the city. Below that users can read the blog about that city. It will also show the number of comments the post has received.
+At the top of the detail blog page, users can see a button to navigte back to the orginal page which displays the title of the blog post which will be the name of the blog city and the image of the city. Below that users can read the blog about that city. It will also show the number of comments the post has received.
 
 ### Detail blog page- Comments
 ![comments](https://user-images.githubusercontent.com/93731898/179607174-bc8896aa-4610-4eb4-a2e7-535143347b2a.PNG)
 ![edit](https://user-images.githubusercontent.com/93731898/179611668-47bf9c7e-aeac-493d-adb9-1c96278a7083.PNG)
 
-At the bottom of the detail blog, users can read the comments posted by other users. If the user is logged in or is a superuser they have access to the buttons to edit or delete the comments.
+At the bottom of the detail blog, users can read the comments posted by other users. If the user is logged in, or is a superuser, they have access to the buttons to edit or delete the comments.
 
 ### Edit comments page
 ![edit comment](https://user-images.githubusercontent.com/93731898/179607779-f17d3c65-a60e-42dd-b080-d6fb643cae2b.PNG)
 
-The user must be logged in, in order to edit the comments otherwise they will not see the edit button. Once the user is logged in, they can comment on a post, edit it or delete it too.
+The user must be logged in, in order to edit the comments, otherwise they will not see the edit button. Once the user is logged in, they can comment on a post, edit it, or delete it too.
 
 ### Contact page
 ![contact](https://user-images.githubusercontent.com/93731898/179608441-8b3dcc8c-7eba-46f8-a9f2-51a19c68c4c0.PNG)
 
-The Contact Page allows users to contact the admin using the contact form provided on the website, once the user clicks send button, the contact form will be submitted to the admin site which the admin has access to read.
+The Contact Page allows users to contact the admin using the contact form provided on the website. Once the user clicks the send button, the contact form will be submitted to the admin site where the administrator has the access to read form.
 
 ### Signup page
 ![signup](https://user-images.githubusercontent.com/93731898/179612483-d71511ca-a3b8-4be9-bdfb-30fcf76ced82.PNG)
 
-On the Signup Page, a new user can sign up for the website by filling out and then submitting the form. Users are not require to provide an email address for signup, it is optional.
+On the Signup Page, a new user can sign up for the website by completing and then submitting the form. Users are not required to provide an email address for signup, it is optional.
 
 ### Login page
 ![signup](https://user-images.githubusercontent.com/93731898/179612497-5d1f3b20-a80a-4213-a192-ab5093464abc.PNG)
 
-On the Login Page, users can log in to the website by entering their username and password and have access to website services for a user registered.
+On the Login Page, users can log in to the website by entering their username and password and have access to website services as a registered user.
 
 ### Logout page
 ![logout](https://user-images.githubusercontent.com/93731898/179612973-07d1e27c-6c5e-4c65-85a9-cfc7c5aa534e.PNG)
 
-On the Logout Page, users can confirm that they wish to exit the website, when the user clicks on logout, they will get a pop up window, asking them if they want to logout.
+On the Logout Page, users can confirm that they wish to exit the website. When the user clicks on logout, a pop up window will appear asking them if they want to logout.
 
 ### Footer
 ![footer](https://user-images.githubusercontent.com/93731898/179614820-a5cb13a8-a87e-4590-aaff-fdd7d3707c6e.PNG)
@@ -149,7 +149,7 @@ I have added an some interactive message to make the website more user friendly 
 
 ![postcomment](https://user-images.githubusercontent.com/93731898/179616302-54967124-54af-4b75-b659-42c1fe96f99d.PNG)
 
-  When users are logged in to the website they can comment on a post and after they submit the comment they will see a message at the top of the page saying "Thank you (username)! Your comment is awaiting approval".
+  When users are logged in to the website, they can comment on a post, and following submission of the comment, they will see a message at the top of the page saying "Thank you (username)! Your comment is awaiting approval".
 
 - Like/Unlike a post
   Logged in users can like or unlike the post
@@ -162,13 +162,13 @@ I have added an some interactive message to make the website more user friendly 
 
 ![commentbox](https://user-images.githubusercontent.com/93731898/179616973-276e1a3c-02c2-4141-9eed-97fc994242b9.PNG)
 
-  User can click on an edit button to edit their comment. User can only edit or delete their comments, they cannot update or remove someone else's comment.
+ The user can click on an edit button to edit their comment. They can only edit or delete their comments, they cannot update or remove someone else's comment.
 
 - Delete a comment
 
 ![delete](https://user-images.githubusercontent.com/93731898/179617049-12977779-ddd4-40a9-be5c-cd5e64ea1564.PNG)
 
-  Similiar to edit a comment, user can click on a delete button and if they click on delete button, they will get a pop up window asking them if they wish to delete      the comment. User can only delete their own comment.
+  Similiar to editing a comment, a user can click on a delete button which will generate a pop up window asking them if they wish to delete the comment. The user can only delete their own comment.
 
 
 ### Admin Panel/ Superuser
@@ -180,7 +180,7 @@ On the Admin Panel, as an admin/superuser I have full access to CRUD functionali
 2. Comments
 3. Contact emails
 
-As admin/superuser I can also approve comments, approve posts and change the status and give other permissions to the users to post a blog.
+As admin/superuser I can also approve comments, approve posts, change the status and give other permissions to the users to post a blog.
 
 
 ## Technologies used
@@ -250,8 +250,8 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 - I would like to create a profile page for the user where they can upload their pictures and personal details such as full name, email address and profile name.
 - The second future is to display a message to the user when they login, logout and sign up.
-- When the user sends an email, there is no message display that message has been sent, i would like to display a message and redirect them to the homepage.
-- I would also like to update the categories for the travel blog as per destination such Europe travel blogs, US travel blogs and so on.
+- When the user sends an email, there is no message display that message has been sent. I would like to display a message and redirect them to the homepage.
+- I would also like to update the categories for the travel blog as per destination such as Europe travel blogs, US travel blogs and so on.
 
 
 ## Creating the Django app
@@ -299,7 +299,7 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 1. Create a runtime.txt python-3.8.13
 2. Create a Procfile web: gunicorn your_project_name.wsgi
 3. When development is complete change the debug setting to: DEBUG = False in settings.py
-4. In this project the summernote editor was used so for this to work in Heroku add: X_FRAME_OPTIONS = SAMEORIGIN to settings.py.
+4. In this project the summernote editor was used, so for this to work in Heroku add: X_FRAME_OPTIONS = SAMEORIGIN to settings.py.
 5. In Heroku settings, delete the config vars for DISABLE_COLLECTSTATIC = 1
 
 ## Credits
@@ -308,7 +308,7 @@ As admin/superuser I can also approve comments, approve posts and change the sta
 
 * All the travel blog content was taken from [Travel borg](https://www.travelblog.org/) and [Wikipedia](https://www.wikipedia.org/)
 * All the images were taken from [Pexels](https://www.pexels.com/)
-* The website logo and design was build by me.
+* The website logo and design was built by me.
 
 ### Information Sources / Resources
 
