@@ -99,7 +99,7 @@ The blog posts section consists of all the travel blogs which a user can read. T
 ![detail-image](https://user-images.githubusercontent.com/93731898/179606732-fc822dbf-479c-48b4-a2b9-d1d99411a865.PNG)
 ![detail-text](https://user-images.githubusercontent.com/93731898/179606752-c33c75cf-68d8-4ecf-b6a1-d7a3cee324b4.PNG)
 
-At the top of the detail blog page, users can see a button to navigte back to the orginal page which displays the title of the blog post which will be the name of the blog city and the image of the city. Below that users can read the blog about that city. It will also show the number of comments the post has received.
+The Detail blog page displays the title of the blog post, which will be the name of the blog city and the image of the city. Below that users can read the blog about that city. It will also show the number of comments the post has received. Also, at the top of the detail blog page, users can see a button to navigte back to the orginal page, called Back to feed.
 
 ### Detail blog page- Comments
 ![comments](https://user-images.githubusercontent.com/93731898/179607174-bc8896aa-4610-4eb4-a2e7-535143347b2a.PNG)
@@ -110,7 +110,7 @@ At the bottom of the detail blog, users can read the comments posted by other us
 ### Edit comments page
 ![edit comment](https://user-images.githubusercontent.com/93731898/179607779-f17d3c65-a60e-42dd-b080-d6fb643cae2b.PNG)
 
-The user must be logged in, in order to edit the comments, otherwise they will not see the edit button. Once the user is logged in, they can comment on a post, edit it, or delete it too.
+If a user wishes to edit comments, by utiising the edit button, they must be logged in. Once the user is logged in, they can comment on a post, edit it, or delete it.
 
 ### Contact page
 ![contact](https://user-images.githubusercontent.com/93731898/179608441-8b3dcc8c-7eba-46f8-a9f2-51a19c68c4c0.PNG)
@@ -141,7 +141,7 @@ On the website footer, users can see basic information about the blog such as co
 
 
 ## User Interaction
-I have added an some interactive message to make the website more user friendly and improve user experience.
+I have added some interactive messaging to make the website more user friendly and improve user experience.
 
 - Comment on a post
 
@@ -168,14 +168,14 @@ I have added an some interactive message to make the website more user friendly 
 
 ![delete](https://user-images.githubusercontent.com/93731898/179617049-12977779-ddd4-40a9-be5c-cd5e64ea1564.PNG)
 
-  Similiar to editing a comment, a user can click on a delete button which will generate a pop up window asking them if they wish to delete the comment. The user can only delete their own comment.
+Similiar to editing a comment, a user can click on a delete button which will generate a pop up window asking them if they wish to delete the comment. The user can only delete their own comment.
 
 
 ### Admin Panel/ Superuser
 
 ![admin](https://user-images.githubusercontent.com/93731898/179617976-ef120f41-4943-4b7f-ba5d-2b541b351a6d.PNG)
 
-On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and delete the following ones:
+On the Admin Panel, as an admin/superuser I have full access to CRUD functionality so I can view, create, edit and delete the following items:
 1. Posts
 2. Comments
 3. Contact emails
@@ -249,17 +249,17 @@ As admin/superuser I can also approve comments, approve posts, change the status
 ## Future features
 
 - I would like to create a profile page for the user where they can upload their pictures and personal details such as full name, email address and profile name.
-- The second future is to display a message to the user when they login, logout and sign up.
+- The second feature is to display a message to the user when they login, logout and sign up.
 - When the user sends an email, there is no message display that message has been sent. I would like to display a message and redirect them to the homepage.
 - I would also like to update the categories for the travel blog as per destination such as Europe travel blogs, US travel blogs and so on.
 
 
 ## Creating the Django app
 
-1. Go to the Code Institute Gitpod Full Template Template
+1. Go to the Code Institute Gitpod Full Template
 2. Click on Use This Template
 3. Once the template is available in your repository click on Gitpod
-4. When the image for the template and the Gitpod are ready open a new terminal to start a new Django App
+4. When the image for the template and the Gitpod are ready, open a new terminal to start a new Django App
 5. Install Django and gunicorn: pip3 install django gunicorn
 6. Install supporting database libraries dj_database_url and psycopg2 library: pip3 install dj_database_url psycopg2
 7. Create file for requirements: in the terminal window type pip freeze --local > requirements.txt
