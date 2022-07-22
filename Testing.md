@@ -108,20 +108,20 @@ A few errors were detected in the settings.py file, however these were related t
 - All the external links are mapping and operating correctly and bring the user to the right social media page by opening a new browser tab.
 - The contact form on the contact page is working and when the user sends an email, it appears on the admin panel.
 - The pagination system is functioning correctly. Any subsequent posts, after the sixth post, will appear on the next page, and the user will be promted to click on the next or prev button to access the next set of posts.
-- On the Post Details Page, the Like/unlike icon functionality is running without issues, a solid heart icon appears once the Like button is clicked and if clicked a second time, the post is unliked.
-- The comment form has no issues and it submits a new comment once the form is completed by a registered user. Once the user submits a comment, they receive a message that their comment is waiting for approval. Once the comment is approved, user can see their message under the blog.
-- The functionality to delete a message, previously sent by the user or by the superuser, is working without issues. The Bootstrap model is open to asking the user if they want to delete the message. Once the action is complete, the interactive message is displayed at the top of the page.
-- The functionality to update a message, previously sent by the user or by the superuser, is working without issues. A new page is open, to update the comment when the button edit is pressed. And when the user clicks submit and new comment is updated in the comment section.
-- Over all, the CRUD functionality is working without issues. Logged in users can create a new post such as update or delete their own posts, also any post can be updated or deleted on this page by the Superuser.
+- On the Post Details Page, the Like/unlike icon functionality is running without issues. A solid heart icon appears once the Like button is clicked and if clicked a second time, the post is unliked.
+- The comment form has no issues and a new comment is submitted once the form is completed by a user. Once the user submits a comment, they receive a message that their comment is waiting for approval. Once the comment is approved, the user can see their message under the blog.
+- The functionality to delete a message previously sent by the user, or by the superuser, is performing without issues. The Bootstrap model appears and asks the user if they want to delete the message. 
+- The functionality to update a message previously sent by the user, or by the superuser, is operatating without issues. A new page opens when the user clicks on edit,  allowing them to update the comment. When the user clicks submit, the new comment is updated in the comment section.
+- Over all, the CRUD functionality is working without issues. Logged in users can edit or delete their own posts. Also, any post can be updated or deleted on this page by the Superuser.
 
 
 2. Backend
 
-- I have tested the Admin Panel repeatedly since the start of the project development. All the models are working without issues.
-- I have created, deleted, and updated data in all models without errors. The models have the behavior expected for what they were built for.
-- Whenever a user comments on a post or submits a book post the Superuser has to approve it before it will be displayed on the website. This functionality is working without issues.
+- I have tested the Admin Panel regularly since the start of the project. All the models are working without issues.
+- I have created, deleted, and updated data in all models without errors. The models behaved as expected according to their function.
+- Whenever a user comments on a post, the Superuser must approve the comment before it will be displayed on the website. This functionality is working without issues.
 
 
 3. Fixed bug
 
-- I continuously had issues with cloudinary and static files and could not deploy my project on heroku, i contacted tutors support team several times for the same issue and evenutally i created a new cloudinary account and new heroku app for the project and after that i was able to deploy my project.
+- I continuously had issues with cloudinary and static files and could not deploy my project on heroku. I contacted tutors support team several times for the same issue and evenutally I created a new cloudinary account and new heroku app for the project and following those changes I was able to deploy my project.
