@@ -2,10 +2,10 @@
 ______________________________
 Back to **[Readme](https://github.com/Deepak9912/django-travel-blog)**
 
-* I tested continuously throughout the development of the project.Each view was tested regularly. When i did not get the desired outcome, i did debugging the fixed the issues.
+* I continually tested throughout the project. Each view was tested regularly. When the desired outcome was not achieved, I perfomred a debugging exercise to correct the issues.
 
 ### Python Validation - PEP8
-Python testing was done using the PEP8 Online to ensure there were no syntax errors in the project. All python files were entered into the online checker and no errors were found in any of the custom codes.
+Python testing was completed using PEP8 Online to ensure there were no syntax errors in the project. All python files were entered into the online checker and no errors were identified in any of the custom codes.
 
 **Django-travel-blog Blog**
 1. Admin.py
@@ -67,7 +67,7 @@ Python testing was done using the PEP8 Online to ensure there were no syntax err
 
 ![settings](https://user-images.githubusercontent.com/93731898/180003715-a53d78e5-dd7f-4567-b0f0-b8e723280039.PNG)
 
-A few errors were raised in the settings.py file, however these were related to default django authorisation code and could not be changed to remove the errors.
+A few errors were detected in the settings.py file, however these were related to the default django authorisation code and could not be altered to remove the errors.
 
 3. urls.py
 
@@ -102,13 +102,13 @@ A few errors were raised in the settings.py file, however these were related to 
 
 1. Frontend
 
-- The Signup, Login and Logout system has no issues and is working accordingly. It shows correct interactive message to the users.
-- The Navbar works fine on different screens and when the user is logged in, User name appears on the navbar with user icon.
-- All the internal links are working and bring the user to the right page on the website.
-- All the external links are working and bring the user to the right social media page by opening a new browser tab.
+- The Signup, Login and Logout system has no issues and is operating accordingly. It displays correct interactive messages to the users.
+- The Navbar functions correctly on different screens and when the user is logged in, the Username appears on the navbar alongside the user icon.
+- All the internal links are mapping and operating correctly and bring the user to the right page on the website.
+- All the external links are mapping and operating correctly and bring the user to the right social media page by opening a new browser tab.
 - The contact form on the contact page is working and when the user sends an email, it appears on the admin panel.
-- The pagination system is working. Any posts after the sixth post appears on the next page and the user will get next or prev button to navigate.
-- On the Post Details Page, the Like/unlike functionality is working without issues and shows the right interactive message to the user when the heart icon is clicked.
+- The pagination system is functioning correctly. Any subsequent posts, after the sixth post, will appear on the next page, and the user will be promted to click on the next or prev button to access the next set of posts.
+- On the Post Details Page, the Like/unlike icon functionality is running without issues, a solid heart icon appears once the Like button is clicked and if clicked a second time, the post is unliked.
 - The comment form has no issues and it submits a new comment once the form is completed by a registered user. Once the user submits a comment, they receive a message that their comment is waiting for approval. Once the comment is approved, user can see their message under the blog.
 - The functionality to delete a message, previously sent by the user or by the superuser, is working without issues. The Bootstrap model is open to asking the user if they want to delete the message. Once the action is complete, the interactive message is displayed at the top of the page.
 - The functionality to update a message, previously sent by the user or by the superuser, is working without issues. A new page is open, to update the comment when the button edit is pressed. And when the user clicks submit and new comment is updated in the comment section.
