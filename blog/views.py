@@ -95,9 +95,9 @@ def delete_comment(request, comment_id):
     """View to delete a comment"""
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
+    print(f"Comment slug: {comment.post.slug}")
     messages.success(request, 'The comment was deleted successfully')
-    return HttpResponseRedirect
-    (reverse('detail_blog', args=[comment.post.slug]))
+    return redirect(reverse_lazy('detail_blog', args=[comment.post.slug]))
 
 
 class EditComment(UpdateView):
