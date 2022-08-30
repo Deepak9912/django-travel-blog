@@ -53,6 +53,13 @@ The color scheme chosen for this project is mainly black and white using bootstr
 
 ![color](https://user-images.githubusercontent.com/93731898/179424976-df48c8b6-63a0-425d-a2bb-c95a3ddf7cbf.PNG)
 
+### Wireframes
+
+#### Database Diagram
+
+![edited database](https://user-images.githubusercontent.com/93731898/187509765-dc8b6c01-d0c6-44db-870f-89bb082848cb.PNG)
+
+
 ### Typography
 There was no special typography used in this project. I have only used in-built p, h1 & h2 typography to keep the website simple.
 
