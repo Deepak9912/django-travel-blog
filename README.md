@@ -57,7 +57,7 @@ The color scheme chosen for this project is mainly black and white using bootstr
 
 #### Database Diagram
 
-![edited database](https://user-images.githubusercontent.com/93731898/187509765-dc8b6c01-d0c6-44db-870f-89bb082848cb.PNG)
+![database-diagram](https://user-images.githubusercontent.com/93731898/187738696-e2304db7-eb11-4503-b2db-99b9fc6d8299.PNG)
 
 
 ### Typography
