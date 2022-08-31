@@ -40,6 +40,10 @@ The live site has been deployed [here](https://travelblog2022.herokuapp.com/).
 ## Agile Methodology
 All functionality and development of this project was managed using GitHub where Projects can be found [here](https://github.com/Deepak9912).
 
+An Agile Approach was used to develop this site. That is, each activity was broken down into small bite-sized portions and performed iteratively, so that as it was repeated, it was tweaked and improved on with each cycle. According to a report from the Standish Group (2018), Agile projects are statistically twice more likely to succeed, and a third less likely to fail than waterfall projects.
+
+To complete the overall aim of this project, i divided the user stories documented under GitHub Issues and these then were broken down into specific tasks called User Stories. These User Stories are small, self-contained units of development work designed to accomplish a specific goal. These User Stories then had acceptance criteria attached for each so that it was clear when the User Stories were achieved as each of these conditions were met.
+
 ### The Scope
 
 Main Site goals:
